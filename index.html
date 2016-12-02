@@ -11,10 +11,17 @@
     <link rel="import" href="bower_components/app-layout/app-drawer/app-drawer.html">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
     <link rel="import" href="bower_components/paper-menu/paper-menu.html">
+    <link rel="import" href="bower_components/paper-card/paper-card.html">
+    <link rel="import" href="bower_components/iron-collapse/iron-collapse.html">
+    <link rel="import" href="bower_components/paper-dialog/paper-dialog.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="bower_components/iron-pages/iron-pages.html">
+    <link rel="import" href="bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="bower_components/iron-icons/hardware-icons.html">
     <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
     <link rel="import" href="bower_components/app-layout/demo/sample-content.html">
+
     <link rel="import" href="bower_components/app-layout/app-scrollpos-control/app-scrollpos-control.html">
 
     <style is="custom-style">
@@ -52,7 +59,42 @@
         </app-toolbar>
 
         <iron-pages selected="{{page}}">
-          <div id="home">home</div>
+          <div class="home">
+
+
+            <paper-button raised onclick="test.open()">dialog with nested dialog</paper-button>
+
+
+
+
+
+
+            <paper-dialog id="test" with-backdrop style="width: 80%;">
+
+              <paper-card heading="Top western road trips" image="http://placehold.it/350x150/FFC107/000000" alt="Sailboat Harbor" style="width: 80%; margin:auto;">
+                <div class="card-content">1,000 miles of wonder</div>
+                <div class="card-actions">
+                  <paper-icon-button icon="hardware:keyboard-arrow-up" title="more info" onclick="_toggle()" style="float:right;">
+                  </paper-icon-button>
+                  <iron-collapse id="more-info" style="width:100%;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim ante, tempus eget volutpat ac, cursus ac ante. Nulla facilisi.
+                  </iron-collapse>
+                  <script>
+                    function _toggle() {
+                      var moreInfo = document.getElementById('more-info');
+                      var iconButton = Polymer.dom(event).localTarget;
+                      iconButton.icon = moreInfo.opened ? 'hardware:keyboard-arrow-up'
+                                                        : 'hardware:keyboard-arrow-down';
+                      moreInfo.toggle();
+                    }
+                  </script>
+                </div>
+              </paper-card>
+
+
+</paper-dialog>
+
+          </div>
           <div class="schedule">schedule</div>
           <div class="about">about</div>
 
