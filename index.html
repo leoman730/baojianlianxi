@@ -34,6 +34,14 @@
         background-color: #4285f4;
         color: #fff;
       }
+
+      .card {
+        width: 500px;
+      }
+      .card .card-content {
+        background-color: gray;
+        color: #fff;
+      }
     </style>
 
 
@@ -45,8 +53,8 @@
     <app-drawer-layout>
 
       <app-drawer>
-        <paper-menu selected="{{page}}">
-          <paper-item>Home</paper-item>
+        <paper-menu selected="{{page}}" id="sidenav">
+          <paper-item >Home</paper-item>
           <paper-item>About</paper-item>
           <paper-item>Schedule</paper-item>
           <paper-item>Account</paper-item>
@@ -65,34 +73,33 @@
             <paper-button raised onclick="test.open()">dialog with nested dialog</paper-button>
 
 
+            <paper-dialog id="test" with-backdrop>
 
-
-
-
-            <paper-dialog id="test" with-backdrop style="width: 80%;">
-
-              <paper-card heading="Top western road trips" image="http://placehold.it/350x150/FFC107/000000" alt="Sailboat Harbor" style="width: 80%; margin:auto;">
+              <paper-card class="card">
                 <div class="card-content">1,000 miles of wonder</div>
+
                 <div class="card-actions">
-                  <paper-icon-button icon="hardware:keyboard-arrow-up" title="more info" onclick="_toggle()" style="float:right;">
+                  Answer <paper-icon-button icon="icons:question-answer" title="more info" onclick="toggle(this)">
                   </paper-icon-button>
-                  <iron-collapse id="more-info" style="width:100%;">
+
+                  <iron-collapse class="answer">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim ante, tempus eget volutpat ac, cursus ac ante. Nulla facilisi.
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent enim ante, tempus eget volutpat ac, cursus ac ante. Nulla facilisi.
                   </iron-collapse>
+
                   <script>
                     function _toggle() {
                       var moreInfo = document.getElementById('more-info');
                       var iconButton = Polymer.dom(event).localTarget;
-                      iconButton.icon = moreInfo.opened ? 'hardware:keyboard-arrow-up'
-                                                        : 'hardware:keyboard-arrow-down';
+                      // iconButton.icon = moreInfo.opened ? 'hardware:keyboard-arrow-up'
+                                                        // : 'hardware:keyboard-arrow-down';
                       moreInfo.toggle();
                     }
                   </script>
                 </div>
+
               </paper-card>
-
-
-</paper-dialog>
+            </paper-dialog>
 
           </div>
           <div class="schedule">schedule</div>
@@ -107,6 +114,24 @@
     <app-scrollpos-control selected="{{page}}"></app-scrollpos-control>
 
   </template>
+
+<script type="text/javascript">
+
+window.addEventListener('WebComponentsReady', function(e) {
+  Polymer.dom(this.root).querySelector('#sidenav').select(0);
+
+  window.toggle = function(elem) {
+    console.log(elem);
+    var answer = Polymer.dom(elem).parentNode.querySelector('.answer');
+    console.log(answer);
+    answer.toggle();
+  }
+
+});
+
+
+</script>
+
 
   </body>
 </html>
