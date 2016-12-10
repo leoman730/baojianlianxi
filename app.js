@@ -1,5 +1,5 @@
 var question_dialog;
-
+var timer;
 
 window.addEventListener('WebComponentsReady', function(e) {
     init();
@@ -9,6 +9,20 @@ function init() {
     question_dialog = Polymer.dom(this.root).querySelector('#question_dialog');
     selectSection(0);
     onQuestionClick();
+
+    initGameClock();
+
+}
+
+
+function initGameClock() {
+  timer = $('.game-clock').FlipClock(900, {
+    autoplay: false,
+    clockFace: 'MinuteCounter',
+    countdown: true,
+    autoStart: false,
+    minimumDigits: 0
+  });
 }
 
 function showAnswer() {
@@ -22,7 +36,7 @@ function selectSection(index) {
 }
 
 function onQuestionClick() {
-    var buttons = document.getElementsByTagName('paper-button');
+    var buttons = document.getElementsByClassName('question-btn');
     var buttonList = Array.prototype.slice.call(buttons);
     buttonList.forEach(function(item, index) {
         item.addEventListener('click', function() {
@@ -52,4 +66,20 @@ function setQuestionContent(content) {
 function toggle(elem) {
     var answer = Polymer.dom(elem).parentNode.querySelector('.answer');
     answer.toggle();
+}
+
+function resetGameClock(elem) {
+  var timerVal = document.getElementById('game-duration').value;
+  timer.setTime(timerVal * 60);
+  timer.start();
+}
+
+function onGameClockBtnClick(elem) {
+  if (elem.innerHTML.indexOf('Start') !== -1 || elem.innerHTML.indexOf('Continue') !== -1) {
+    timer.start();
+    elem.innerHTML = 'Stop';
+  } else {
+    timer.stop();
+    elem.innerHTML = 'Continue';
+  }
 }

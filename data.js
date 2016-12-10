@@ -17,8 +17,8 @@ var questionPool = {
         'answer': '友阿爹，循都基（４:2）'
     },
     'sec1-phili-1-5': {
-      'question': '請猜詩歌名字。 <p><audio controls><source src="assets/耶和華你是我的神.mp3" type="audio/mpeg"></audio></p>',
-      'answer': '耶和華你是我的神。'
+      'question': '圖中的是誰？ <p><img src="assets/chenzhanlao.png" /></p>',
+      'answer': '陳長老與家人年輕時。'
     },
 
     // section 1 腓立比書 (2)

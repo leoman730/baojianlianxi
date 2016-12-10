@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <title>Test</title>
+    <title>寶劍練習</title>
+
+    <link rel="stylesheet" href="bower_components/flipclock/compiled/flipclock.css">
+
     <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
     <link rel="import" href="bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
@@ -26,6 +29,7 @@
     <link rel="import" href="bower_components/app-layout/app-scrollpos-control/app-scrollpos-control.html">
 
     <style is="custom-style">
+
         body {
             margin: 0;
             font-family: 'Roboto', 'Noto', sans-serif;
@@ -46,6 +50,13 @@
             color: #fff;
         }
 
+        .questions {
+          margin-top: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         .question img {
           text-align: center;
           padding:1px;
@@ -54,6 +65,48 @@
           display: block;
           margin:auto;
         }
+
+        .category {
+          width: 15%;
+          margin:auto;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .category paper-button {
+          width: 100%;
+          min-height: 100px;
+          background-color: var(--paper-green-500);
+          color: #fff;
+
+          /*float: left;*/
+          margin-bottom: 25%;
+        }
+
+        paper-button:hover {
+          /*background: lime;*/
+          background-color: var(--paper-indigo-100);
+        }
+
+        #score-board {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        #score-board input {
+          border: none;
+          pading: 0;
+          margin: 0;
+          font-size: 2.5rem;
+          font-weight: bold;
+          outline: none;
+          width: 20%;
+        }
+
+        #score-board paper-card {
+          width: 25%;
+        }
+
 
     </style>
 
@@ -96,30 +149,103 @@
       <div>
         <app-toolbar>
           <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <h1>寶劍練習</h1>
         </app-toolbar>
 
         <iron-pages selected="{{page}}">
           <div class="section-1">
-<div class="questions">
-  <div id="phili-1" class="category">
-    <paper-button raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
-    <paper-button raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
-    <paper-button raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
-    <paper-button raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
-    <paper-button raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
-  </div>
-</div>
+
+          <div class="questions clearfix">
+            <div id="sec1-phili-1" class="category">
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-1">1</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-2">2</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-3">3</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-4">4</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-5">5</paper-button>
+            </div>
+
+            <div id="sec1-phili-2" class="category">
+              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
+            </div>
 
 
+            <div id="sec1-church-fellowship" class="category">
+              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
+            </div>
 
 
+            <div id="sec1-bible" class="category">
+              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
+            </div>
+
+            <div id="sec1-iq-random" class="category">
+              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
+            </div>
 
           </div>
+        </div> <!-- end section 1 -->
+
           <div class="schedule">schedule</div>
           <div class="about">about</div>
 
           </div>
         </iron-pages>
+
+        <app-toolbar>
+          <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+          <h1>分數</h1>
+        </app-toolbar>
+
+
+<div id="score-board">
+    <paper-card heading="Team A" alt="Team A">
+        <div class="card-content">
+            <input type="text" name="team-a" value="0">
+        </div>
+        <div class="card-actions">
+          <paper-button>5</paper-button>
+          <paper-button>4</paper-button>
+        </div>
+    </paper-card>
+
+
+    <paper-card>
+        <div class="card-content">
+          <div class="game-clock"></div>
+          <input type="text" id="game-duration" value="15">
+          <paper-button onclick="onGameClockBtnClick(this); return false;">Start</paper-button>
+          <paper-button onclick="resetGameClock(); return false;">Reset</paper-button>
+        </div>
+    </paper-card>
+
+    <paper-card heading="Team B" alt="Team B">
+        <div class="card-content">
+            <input type="text" name="team-b" value="2">
+        </div>
+        <div class="card-actions">
+            <paper-button>5</paper-button>
+            <paper-button>4</paper-button>
+        </div>
+    </paper-card>
+</div>
+
+
       </div>
 
     </app-drawer-layout>
@@ -128,6 +254,8 @@
 
   </template>
 
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/flipclock/compiled/flipclock.min.js"></script>
   <script src="data.js" charset="utf-8"></script>
   <script src="app.js" charset="utf-8"></script>
 
