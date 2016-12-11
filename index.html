@@ -44,6 +44,10 @@
             color: #fff;
         }
 
+        .banner img, .gamerules img {
+          width: 100%;
+        }
+
         .card {
             width: 500px;
         }
@@ -227,6 +231,8 @@
 
       <app-drawer>
         <paper-menu selected="{{page}}" id="sidenav">
+          <paper-item>寶劍練習</paper-item>
+          <paper-item>遊戲規則</paper-item>
           <paper-item>Section 1</paper-item>
           <paper-item>Section 2</paper-item>
           <paper-item>Section 3</paper-item>
@@ -241,6 +247,15 @@
         </app-toolbar>
 
         <iron-pages selected="{{page}}">
+
+        <div class="banner">
+          <img src="assets/寶劍練習.png">
+        </div>
+
+        <div class="gamerules">
+          <img src="assets/遊戲規則.png">
+        </div>
+
           <div class="section-1">
 
           <div class="questions clearfix">
@@ -259,7 +274,7 @@
               <paper-button class="question-btn" raised id="phili-2-2" data-question-index="sec1-phili-1-2">20 分</paper-button>
               <paper-button class="question-btn" raised id="phili-2-3" data-question-index="sec1-phili-1-3">30 分</paper-button>
               <paper-button class="question-btn" raised id="phili-2-4" data-question-index="sec1-phili-1-4">40 分</paper-button>
-              <paper-button class="question-btn" raised id="phili-2-5" data-question-index="sec1-phili-1-5">50 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-2 -5" data-question-index="sec1-phili-1-5">50 分</paper-button>
             </div>
 
 
