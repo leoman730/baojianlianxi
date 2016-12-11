@@ -25,6 +25,9 @@
     <link rel="import" href="bower_components/iron-icons/hardware-icons.html">
     <link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
     <link rel="import" href="bower_components/app-layout/demo/sample-content.html">
+    <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
+    <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+
 
     <link rel="import" href="bower_components/app-layout/app-scrollpos-control/app-scrollpos-control.html">
 
@@ -73,14 +76,62 @@
           flex-direction: column;
         }
 
-        .category paper-button {
+
+
+        .section-1 .questions paper-button {
           width: 100%;
-          min-height: 80px;
+          min-height: 60px;
           background-color: var(--paper-green-500);
           color: #fff;
-
+          font-size: 1.5rem;
+          font-weight: bold;
           /*float: left;*/
           margin-bottom: 15%;
+        }
+
+        .category-title {
+          background-color: var(--paper-teal-500) !important;
+          min-height: 80px !important;
+        }
+
+        .section-2 .category {
+          width: 80%;
+          display:flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: auto;
+        }
+
+        .section-2 .questions paper-button {
+          width: 30%;
+          min-height: 120px;
+          background-color: var(--paper-cyan-500);
+          color: #fff;
+          font-size: 2.5rem;
+          font-weight: bold;
+
+          /*float: left;*/
+          margin-bottom: 1%;
+        }
+
+
+        .section-3 .category {
+          width: 80%;
+          display:flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: auto;
+        }
+
+        .section-3 .questions paper-button {
+          width: 40%;
+          min-height: 300px;
+          background-color: var(--paper-deep-orange-300);
+          color: #fff;
+          font-size: 3.5rem;
+          font-weight: bold;
+          /*float: left;*/
+          margin-bottom: 1%;
         }
 
         paper-button:hover {
@@ -88,9 +139,15 @@
           background-color: var(--paper-indigo-100);
         }
 
+        paper-button[disabled] {
+          /*background: var(--paper-gray-100);*/
+          background-color: gray !important;
+        }
+
         #score-board {
           display: flex;
           justify-content: space-between;
+          padding: 2%;
         }
 
         #score-board input {
@@ -100,14 +157,44 @@
           font-size: 2.5rem;
           font-weight: bold;
           outline: none;
-          width: 20%;
+          width: 30%;
+        }
+
+        #score-board .team input {
+          display: block;
+          margin: auto;
         }
 
         #score-board paper-card {
           width: 25%;
         }
 
+        .team .score-actions paper-button {
+          border-radius: 60px;
+          min-width: inherit;
+          width: 2rem;
+          height: 2rem;
+          /*background-color: #ccc;*/
+        }
 
+        input#game-duration  {
+          color: #ccc;
+        }
+
+        paper-radio-button.red {
+          --paper-radio-button-checked-color: var(--paper-red-500);
+          --paper-radio-button-checked-ink-color: var(--paper-red-500);
+          --paper-radio-button-unchecked-color: var(--paper-red-900);
+          --paper-radio-button-unchecked-ink-color: var(--paper-red-900);
+          --paper-radio-button-label-color: var(--paper-red-500);
+        }
+        paper-radio-button.green {
+          --paper-radio-button-checked-color: var(--paper-green-500);
+          --paper-radio-button-checked-ink-color: var(--paper-green-500);
+          --paper-radio-button-unchecked-color: var(--paper-green-900);
+          --paper-radio-button-unchecked-ink-color: var(--paper-green-900);
+          --paper-radio-button-label-color: var(--paper-green-500);
+        }
     </style>
 
 
@@ -157,52 +244,92 @@
 
           <div class="questions clearfix">
             <div id="sec1-phili-1" class="category">
-              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-1">1</paper-button>
-              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-2">2</paper-button>
-              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-3">3</paper-button>
-              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-4">4</paper-button>
-              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-5">5</paper-button>
+              <paper-button class="category-title" raised data-question-index="sec1-phili-1-1">腓立比書(1)</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-1">10 分</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-2">20 分</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-3">30 分</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-4">40 分</paper-button>
+              <paper-button class="question-btn" raised data-question-index="sec1-phili-1-5">50 分</paper-button>
             </div>
 
             <div id="sec1-phili-2" class="category">
-              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
+              <paper-button class="category-title" raised data-question-index="sec1-phili-1-1">腓立比書(2)</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">10 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">20 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">30 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">40 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">50 分</paper-button>
             </div>
 
 
             <div id="sec1-church-fellowship" class="category">
-              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
+              <paper-button class="category-title" raised data-question-index="sec1-phili-1-1">團契教會題</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">10 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">20 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">30 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">40 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">50 分</paper-button>
             </div>
 
 
             <div id="sec1-bible" class="category">
-              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
+              <paper-button class="category-title" raised data-question-index="sec1-phili-1-1">聖經常識題</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">10 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">20 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">30 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">40 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">50 分</paper-button>
             </div>
 
             <div id="sec1-iq-random" class="category">
-              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">1</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">2</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">3</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">4</paper-button>
-              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">5</paper-button>
+              <paper-button class="category-title" raised data-question-index="sec1-phili-1-1">IQ任意題</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-1" data-question-index="sec1-phili-1-1">10 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-2" data-question-index="sec1-phili-1-2">20 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-3" data-question-index="sec1-phili-1-3">30 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-4" data-question-index="sec1-phili-1-4">40 分</paper-button>
+              <paper-button class="question-btn" raised id="phili-1-5" data-question-index="sec1-phili-1-5">50 分</paper-button>
             </div>
 
           </div>
         </div> <!-- end section 1 -->
 
-          <div class="schedule">schedule</div>
-          <div class="about">about</div>
+          <div class="section-2">
+              <div class="questions clearfix">
+                <div class="category">
+                  <paper-button class="question-btn" raised data-question-index="sec2-1">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-2">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-3">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-4">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-5">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-6">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-7">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-8">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-9">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-10">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-11">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-12">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-13">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-14">?</paper-button>
+                  <paper-button class="question-btn" raised data-question-index="sec2-15">?</paper-button>
+                </div>
+              </div>
+          </div><!-- end section 1 -->
+
+
+
+
+
+
+
+
+          <div class="section-3">
+            <div class="questions clearfix">
+              <div class="category">
+                <paper-button class="question-btn" raised data-question-index="sec3-1">?</paper-button>
+                <paper-button class="question-btn" raised data-question-index="sec3-2">?</paper-button>
+            </div>
+          </div>
+        </div> <!-- end section -->
 
           </div>
         </iron-pages>
@@ -214,34 +341,51 @@
 
 
 <div id="score-board">
-    <paper-card heading="Team A" alt="Team A">
+    <paper-card heading="Team A" alt="Team A" class="team">
         <div class="card-content">
-            <input type="text" name="team-a" value="0">
+            <input type="text" name="team_a" id="team_a_score" value="0">
         </div>
-        <div class="card-actions">
-          <paper-button>5</paper-button>
-          <paper-button>4</paper-button>
+        <div class="card-actions score-actions">
+          <paper-button data-value=10 data-team="team_a" onclick="updateScore(this); return false;">10</paper-button>
+          <paper-button data-value=20 data-team="team_a" onclick="updateScore(this); return false;">20</paper-button>
+          <paper-button data-value=30 data-team="team_a" onclick="updateScore(this); return false;">30</paper-button>
+          <paper-button data-value=40 data-team="team_a" onclick="updateScore(this); return false;">40</paper-button>
+          <paper-button data-value=50 data-team="team_a" onclick="updateScore(this); return false;">50</paper-button>
         </div>
+
+        <paper-radio-group class="sigh" id="team-a-sigh" selected="correct">
+          <paper-radio-button name="correct" class="green" onclick="setTeamArithmeticSigh('team_a','plus'); return false;">Correct</paper-radio-button>
+          <paper-radio-button name="incorrect" class="red" onclick="setTeamArithmeticSigh('team_a','minor'); return false;">Incorrect</paper-radio-button>
+        </paper-radio-group>
+
     </paper-card>
 
 
     <paper-card>
         <div class="card-content">
           <div class="game-clock"></div>
-          <input type="text" id="game-duration" value="15">
           <paper-button onclick="onGameClockBtnClick(this); return false;">Start</paper-button>
           <paper-button onclick="resetGameClock(); return false;">Reset</paper-button>
+          <input type="text" id="game-duration" value="15">
         </div>
     </paper-card>
 
-    <paper-card heading="Team B" alt="Team B">
-        <div class="card-content">
-            <input type="text" name="team-b" value="2">
-        </div>
-        <div class="card-actions">
-            <paper-button>5</paper-button>
-            <paper-button>4</paper-button>
-        </div>
+    <paper-card heading="Team B" alt="Team B" class="team">
+      <div class="card-content">
+          <input type="text" name="team_b" id="team_b_score" value="0">
+      </div>
+      <div class="card-actions score-actions">
+        <paper-button data-value=10 data-team="team_b" onclick="updateScore(this); return false;">10</paper-button>
+        <paper-button data-value=20 data-team="team_b" onclick="updateScore(this); return false;">20</paper-button>
+        <paper-button data-value=30 data-team="team_b" onclick="updateScore(this); return false;">30</paper-button>
+        <paper-button data-value=40 data-team="team_b" onclick="updateScore(this); return false;">40</paper-button>
+        <paper-button data-value=50 data-team="team_b" onclick="updateScore(this); return false;">50</paper-button>
+      </div>
+
+      <paper-radio-group class="sigh" id="team-b-sigh" selected="correct">
+        <paper-radio-button name="correct" class="green" onclick="setTeamArithmeticSigh('team_b','plus'); return false;">Correct</paper-radio-button>
+        <paper-radio-button name="incorrect" class="red" onclick="setTeamArithmeticSigh('team_b','minor'); return false;">Incorrect</paper-radio-button>
+      </paper-radio-group>
     </paper-card>
 </div>
 

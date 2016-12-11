@@ -39,8 +39,21 @@ var questionPool = {
     'sec1-random-2': {
       'question': '請猜詩歌名字。 <p><source src="耶和華你是我的神.mp3" type="audio/mpeg"></p>',
       'answer': '陳長老與家人年輕時。'
-    }
+    },
 
 
+    // section 2
+    'sec2-1': {
+      'question': '請猜詩歌名字。 <p><source src="耶和華你是我的神.mp3" type="audio/mpeg"></p>',
+      'answer': '陳長老與家人年輕時。'
+    },
+    'sec2-2': {
+      'question': '請猜詩歌名字。 <p><source src="耶和華你是我的神.mp3" type="audio/mpeg"></p>',
+      'answer': '陳長老與家人年輕時。'
+    },
+    'sec2-3': {
+      'question': '請猜詩歌名字。 <p><source src="耶和華你是我的神.mp3" type="audio/mpeg"></p>',
+      'answer': '陳長老與家人年輕時。'
+    },
 
 };

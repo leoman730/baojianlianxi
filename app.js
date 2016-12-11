@@ -1,5 +1,7 @@
 var question_dialog;
-var timer;
+var clock;
+var team_a_sigh = 'plus';
+var team_b_sigh = 'plus';
 
 window.addEventListener('WebComponentsReady', function(e) {
     init();
@@ -16,20 +18,12 @@ function init() {
 
 
 function initGameClock() {
-  timer = $('.game-clock').FlipClock(900, {
+  clock = new FlipClock($('.game-clock'), 900, {
     autoplay: false,
     clockFace: 'MinuteCounter',
     countdown: true,
     autoStart: false,
-    minimumDigits: 0,
-    onStart: function() {
-        console.log('i am starting');
-    },
-    onInterval: function() {
-        console.log('here');
-        console.log(timer.getFaceValue);
-        console.log(this.getFaceValue());
-    }
+    minimumDigits: 0
   });
 }
 
@@ -51,6 +45,7 @@ function onQuestionClick() {
             var questionIndex = item.dataset['questionIndex'];
             var questionContent = getQuestionContentByIndex(questionIndex);
 
+            item.disabled = true;
             openQuestion(questionContent);
         });
     });
@@ -77,17 +72,46 @@ function toggle(elem) {
 }
 
 function resetGameClock(elem) {
-  var timerVal = document.getElementById('game-duration').value;
-  timer.setTime(timerVal * 60);
-  // timer.start();
+  var clockVal = document.getElementById('game-duration').value;
+  clock.setTime(clockVal * 60);
+  // clock.start();
 }
 
 function onGameClockBtnClick(elem) {
   if (elem.innerHTML.indexOf('Start') !== -1 || elem.innerHTML.indexOf('Continue') !== -1) {
-    timer.start();
+    clock.start();
     elem.innerHTML = 'Stop';
   } else {
-    timer.stop();
+    clock.stop();
     elem.innerHTML = 'Continue';
+  }
+}
+
+function setTeamArithmeticSigh(team, sigh) {
+  if (team === 'team_a') {
+    team_a_sigh = sigh;
+  } else if (team === 'team_b') {
+    team_b_sigh = sigh;
+  }
+}
+
+function updateScore(elem) {
+  var score = elem.dataset.value;
+  var team = elem.dataset.team;
+
+  if (team === 'team_a') {
+    if (team_a_sigh == 'plus') {
+      document.getElementById("team_a_score").value = parseInt(document.getElementById("team_a_score").value, 10) + parseInt(score, 10);
+    } else {
+      document.getElementById("team_a_score").value = parseInt(document.getElementById("team_a_score").value, 10) - parseInt(score, 10);
+    }
+
+  } else if (team === 'team_b') {
+    if (team_b_sigh === 'plus') {
+        document.getElementById("team_b_score").value = parseInt(document.getElementById("team_b_score").value, 10) + parseInt(score, 10);
+    } else {
+      document.getElementById("team_b_score").value = parseInt(document.getElementById("team_b_score").value, 10) - parseInt(score, 10);
+    }
+
   }
 }
