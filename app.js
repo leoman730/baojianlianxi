@@ -21,7 +21,15 @@ function initGameClock() {
     clockFace: 'MinuteCounter',
     countdown: true,
     autoStart: false,
-    minimumDigits: 0
+    minimumDigits: 0,
+    onStart: function() {
+        console.log('i am starting');
+    },
+    onInterval: function() {
+        console.log('here');
+        console.log(timer.getFaceValue);
+        console.log(this.getFaceValue());
+    }
   });
 }
 
@@ -71,7 +79,7 @@ function toggle(elem) {
 function resetGameClock(elem) {
   var timerVal = document.getElementById('game-duration').value;
   timer.setTime(timerVal * 60);
-  timer.start();
+  // timer.start();
 }
 
 function onGameClockBtnClick(elem) {
