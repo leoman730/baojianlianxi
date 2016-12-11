@@ -58,6 +58,9 @@ function getQuestionContentByIndex(index) {
 
 function openQuestion(questionContent) {
     setQuestionContent(questionContent);
+        
+    question_dialog.querySelector('.answer').hide();
+
     question_dialog.toggle();
 }
 
