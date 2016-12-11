@@ -100,20 +100,20 @@ var questionPool = {
       'answer': '耶和華你是我的神'
     },
     'sec1-song-2': {
-      'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/耶和華你是我的神.mp3" type="audio/mpeg"></audio></p>',
-      'answer': '耶和華你是我的神'
+      'question': '請猜詩歌名字。 <p>你是我的主，引我走正義路。高山或低谷，都是你在保護。 萬人中唯獨，你愛我認識我，永遠不變的應許，這一生都是祝福。 一步又一步，這是恩典之路，你愛、你手，將 ...</p>',
+      'answer': '恩典之路'
     },
     'sec1-song-3': {
-      'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/耶和華你是我的神.mp3" type="audio/mpeg"></audio></p>',
-      'answer': '耶和華你是我的神'
+      'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/你坐著為王.mp3" type="audio/mpeg"></audio></p>',
+      'answer': '你坐著為王'
     },
     'sec1-song-4': {
-      'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/耶和華你是我的神.mp3" type="audio/mpeg"></audio></p>',
-      'answer': '耶和華你是我的神'
+      'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/你愛永不變.mp3" type="audio/mpeg"></audio></p>',
+      'answer': '你愛永不變'
     },
     'sec1-song-5': {
-      'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/耶和華你是我的神.mp3" type="audio/mpeg"></audio></p>',
-      'answer': '耶和華你是我的神'
+      'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/全然為你.mp3" type="audio/mpeg"></audio></p>',
+      'answer': '全然為你'
     },
 
 
@@ -174,12 +174,12 @@ var questionPool = {
       'answer': '五餅二魚'
     },
     'sec2-9': {
-      'question': '稱為「歌中之歌」的是:',
-      'answer': 'A.「耶利米哀歌」<br />B.「耶利哥」<br />C.「詩篇」<br />D.「雅歌」'
+      'question': '稱為「歌中之歌」的是:<br />A.「耶利米哀歌」<br />B.「耶利哥」<br />C.「詩篇」<br />D.「雅歌」',
+      'answer': 'D.「雅歌」'
     },
     'sec2-10': {
-      'question': '「在耶和華的山上必有預備」這句話是誰說的？',
-      'answer': 'A.「以利亞」<br />B.「摩西」<br />C.「耶穌」<br />D.「亞伯拉罕」'
+      'question': '「在耶和華的山上必有預備」這句話是誰說的？<br />A.「以利亞」<br />B.「摩西」<br />C.「耶穌」<br />D.「亞伯拉罕」',
+      'answer': 'D.「亞伯拉罕」'
     },
     'sec2-11': {
       'question': '羅斯福公園的『聖誕節社區佈道日』是在什麼時候',
@@ -190,8 +190,8 @@ var questionPool = {
       'answer': '5/12-5/14， spruce park retreat center'
     },
     'sec2-13': {
-      'question': '',
-      'answer': ''
+      'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/從心合一.mp3" type="audio/mpeg"></audio></p>',
+      'answer': '從心合一'
     },
     'sec2-14': {
       'question': '',
