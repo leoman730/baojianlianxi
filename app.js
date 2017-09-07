@@ -9,12 +9,21 @@ window.addEventListener('WebComponentsReady', function(e) {
 
 function init() {
     question_dialog = Polymer.dom(this.root).querySelector('#question_dialog');
+    // initGameBoard();
     selectSection(0);
     onQuestionClick();
 
     initGameClock();
 
 }
+
+
+function initGameBoard() {
+  dataset.each(function(section) {
+    console.log(section);
+  });
+}
+
 
 
 function initGameClock() {
