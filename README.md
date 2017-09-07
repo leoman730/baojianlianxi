@@ -1,5 +1,3 @@
-![Logo of the project](./images/logo.sample.png)
-
 # [寶劍練習](https://leoman730.github.io/baojianlianxi/)
 
 > Additional information or tag line
