@@ -1,6 +1,7 @@
 ![Logo of the project](./images/logo.sample.png)
 
-# Name of the project
+# [寶劍練習](https://leoman730.github.io/baojianlianxi/)
+
 > Additional information or tag line
 
 A brief description of your project, what it is used for.
