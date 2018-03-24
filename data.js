@@ -83,13 +83,13 @@ var questionPool = {
         'answer': 'A、尼羅河'
     },
     'sec1-bible-4': {
-        'question': '人体最大的解毒器官是?<br />A、胃 <br />B、肾脏 <br />C、肝脏 <br />D、脾',
-        'answer': 'B、肾脏'
+        'question': '人体最大的解毒器官是?<br />A、胃 <br />B、腎臟 <br />C、肝臟 <br />D、脾',
+        'answer': 'B、腎臟'
     },
 
     'sec1-bible-5': {
-      'question': '下面哪种酸，人在品尝时不是酸味的？<br />A、琥珀酸 <br />B、苹果酸 <br />C、柠檬酸 <br />D、单宁酸',
-      'answer': 'D、单宁酸'
+      'question': '下面哪种酸，人在品尝时不是酸味的？<br />A、琥珀酸 <br />B、蘋果酸 <br />C、檸檬酸 <br />D、單寧酸',
+      'answer': 'D、單寧酸'
     },
 
     // section 1 猜猜我是誰
