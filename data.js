@@ -1,216 +1,214 @@
 var questionPool = {
-    // section 1 舊約常識題(1)
+    // section 1 新約聖經題目(1)
     'sec1-phili-1-1': {
-        'question': '誰收到他父親給的一件彩衣？',
-        'answer': '約瑟（創37：3）'
+        'question': '啟示綠裏的七星代表什麼？',
+        'answer': '七星就是七個教會的使者 。（啟1:20）'
     },
     'sec1-phili-1-2': {
-      'question': '誰是猶太人的第一個王？',
-      'answer': '掃羅（撒上9：1 ~ 2）'
+      'question': '在啟示綠, 約翰要責備以弗所教會什麼？',
+      'answer': '失去起初的愛心<br /> "然而有一件事我要責備你，就是你把起初的愛心離棄了。"（啟2:4）'
     },
     'sec1-phili-1-3': {
-      'question': '路得再一次又嫁了誰？',
-      'answer': '波阿斯（得4：13）'
+      'question': '聖經以巴蘭代表教會的心口不一，請問哪個教會服從了巴蘭教訓？',
+      'answer': '別迦摩教會<br /> "然而有幾件事我要責備你（別迦摩教會）、因為在你那裡、有人服從了巴蘭的教訓．這巴蘭曾教導巴勒將絆腳石放在以色列人面前、叫他們喫祭偶像之物、行姦淫的事。"（啟2:14）'
     },
     'sec1-phili-1-4': {
-        'question': '在人類中以力氣最大見稱的是誰？',
-        'answer': '參孫（士13：24）'
+        'question': '保羅曾提及哪三位年輕人是他在主裡面的兒子？',
+        'answer': '提摩太（提前1:2）、提多（多1:4）、阿尼西母（門1:10）'
     },
     'sec1-phili-1-5': {
-        'question': '得_____，得_____的，這人便為有福。因為得____勝過得____，其利益強如____。',
-        'answer': '(箴言 3:13-14) 智慧、聰明、智慧、銀子、精金'
+        'question': '啟示錄的四活物有哪些？',
+        'answer': '獅子、牛犢、臉面像人、飛鷹 （啟6:11）'
     } ,
 
-    // section 1 舊約常識題(2)
+    // section 1 新約聖經題目(2)
     'sec1-phili-2-1': {
-      'question': '約瑟的哥哥們把約瑟賣了多少銀子？',
-      'answer': '20塊銀子--（創37：28）'
+      'question': '我是_____，你們是_____。常在我裡面的，我也常在他裡面，這人就多_____。因為離了我，你們就不能作什麼。',
+      'answer': '葡萄樹、枝子、結果子 (約15:5）'
     },
     'sec1-phili-2-2': {
-        'question': '詩篇23篇是誰寫的？',
-        'answer': '大衛王'
+        'question': '應當_____，只要_____藉著禱告，祈求，和感謝，將你們所要的告訴神。神所賜_____的平安，必在基督耶穌裡，保守你們的_____。',
+        'answer': '一無掛慮、凡事、出人意外、心懷意念 （腓4:6-7）'
     },
     'sec1-phili-2-3': {
-      'question': '以色列人準備入迦南地時有一位妓女幫助他們，哪個妓女叫什麼名字？',
-      'answer': '喇合 （約6：15～25）'
+      'question': '凡勞苦_____的人，可以到我這裡來，我就使你們得_____。我心裡_____、你們當負_____、學_____、這樣、你們心裡就必得享安息。因為我的軛是_____的、我的擔子是_____的。',
+      'answer': '擔重擔、安息、柔和謙卑、我的軛、我的樣式、容易、輕省 （太11:28-30)'
 
     },
     'sec1-phili-2-4': {
-      'question': '這些事都已聽見了，總意就是_______, 謹守他的_______, 這是人所______的_______。',
-      'answer': '敬畏神、誡命、當盡、本分 （傳道書12:13）'
+      'question': '我_____的告訴你們，_____不落在地裡死了，_____是一粒。若是_____，就結出許多子粒來。',
+      'answer': '實實在在、一粒麥子、仍舊、死了 (約12:24-25)'
     },
     'sec1-phili-2-5': {
-      'question': '耶和華拉法的意思是?',
-      'answer': '耶和華是醫治者 （出15:26）'
+      'question': '全身都靠他聯絡得合式、百節_____，照著各体的功用，_____，便叫身体漸漸增長，在_____建立自己。污穢的_____，一句不可出口，只要隨事說_____的好話，叫聽見的人得_____。',
+      'answer': '各按各職、彼此相助、愛中、言語、造就人、益處 （弗4:16、29）'
     },
 
 
     // section 1 團契教會題
     'sec1-church-fellowship-1': {
-        'question': '10/29/17 是迦南團契的第幾周年慶？',
-        'answer': '5週年'
+        'question': '伊甸團契2018年的退修會是在什麼時候？',
+        'answer': '6/22-6/24'
     },
     'sec1-church-fellowship-2': {
-        'question': '請講出5個團契聚會主題。',
-        'answer': '寶劍練習、福音茶會、查經、講座、燒烤、家庭聚會、郊遊、退修會、一年讀經計劃、新年聚會'
+        'question': '中國短宣隊今年將會前往中國哪個省作為為期兩週的短期短宣體驗？',
+        'answer': '廣西'
     },
     'sec1-church-fellowship-3': {
-        'question': '中宣會社區同樂日的主題是什麼？',
-        'answer': '『中宣會是我家，歡迎您參加』'
+        'question': '今天是棕樹節，請問棕樹節的由來？',
+        'answer': '棕樹節（Palm Sunday），為紀念主耶穌騎驢進耶路撒冷，是耶穌受難週的開始，即耶穌為完成上帝的旨意，應驗先知的預言，騎驢進入耶路撒冷前，群眾手持棕樹枝夾道歡迎，將衣服鋪在地上，迎接主耶穌進城的主日'
     },
     'sec1-church-fellowship-4': {
-        'question': '請講出一個中宣會夏季成人主日學的課程。',
-        'answer': '粵語：「臨別贈《言》」<br />國語：（1）如何帶領查經  (2)瑪拉基書'
+        'question': '3/29/18 中宣會有什麼崇拜？幾點開始？',
+        'answer': '濯足聖餐崇拜 、晚上七點'
     },
     'sec1-church-fellowship-5': {
-      'question': '中宣會今年的主題經文是什麼？',
-      'answer': '殷勤不可懶惰。要心裡火熱，常常服事主。在指望中要喜樂，在患難中要忍耐，禱告要恆切。（羅12：11-12）'
+      'question': '在受難週，中宣會有那些的聚會崇拜記念主耶穌？',
+      'answer': '濯足聖餐、受難聖餐、禁食禱告、復活節聖餐'
     },
 
 
 
-    // section 1 看圖說故事
+    // section 1 常識題
     'sec1-bible-1': {
-        'question': '<img src="assets/redsea.png"  style="width: 80%;"/>',
-        'answer': '摩西分紅海'
+        'question': '一個四邊形木塊，拿刀砍掉一個角，還有幾個角？',
+        'answer': '5'
     },
     'sec1-bible-2': {
-        'question': '<img src="assets/hittingstone.png"  style="width: 80%;"/>',
-        'answer': '摩西擊打磐石出水 '
+        'question': '哪一種是再生能源 ? <br />A、石油 <br />B、水力<br /> C、礦產<br /> D、煤',
+        'answer': 'B、水力'
     },
     'sec1-bible-3': {
-        'question': '<img src="assets/jonas.png" style="width: 80%;" />',
-        'answer': '大魚與約拿'
+        'question': '全球最長的河流是？ <br />A、尼羅河 <br />B、萊茵河<br />C、黃河<br />D、亞馬遜河',
+        'answer': 'A、尼羅河'
     },
     'sec1-bible-4': {
-        'question': '<img src="assets/jobs.png"  style="width: 80%;"/>',
-        'answer': '約伯受試煉'
+        'question': '人体最大的解毒器官是?<br />A、胃 <br />B、肾脏 <br />C、肝脏 <br />D、脾',
+        'answer': 'B、肾脏'
     },
 
     'sec1-bible-5': {
-      'question': '<img src="assets/david.png"  style="width: 80%;" />',
-      'answer': '大衛與哥利亞'
+      'question': '下面哪种酸，人在品尝时不是酸味的？<br />A、琥珀酸 <br />B、苹果酸 <br />C、柠檬酸 <br />D、单宁酸',
+      'answer': 'D、单宁酸'
     },
 
     // section 1 猜猜我是誰
     'sec1-song-1': {
-      // 'question': '請猜詩歌名字。 <p><audio controls preload=auto><source src="assets/耶和華你是我的神.mp3" type="audio/mpeg"></audio></p>',
-      // 'answer': '耶和華你是我的神'
       'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.<br />不可以說出或做出該人名, 或其同音字, 否則該題分數取消',
-      'answer': '摩西'
+      'answer': '保羅'
     },
     'sec1-song-2': {
       'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.<br />不可以說出或做出該人名, 或其同音字, 否則該題分數取消',
-      'answer': '約瑟'
+      'answer': '彼得'
     },
     'sec1-song-3': {
       'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.<br />不可以說出或做出該人名, 或其同音字, 否則該題分數取消',
-      'answer': '所羅門'
+      'answer': '拉薩路'
     },
     'sec1-song-4': {
       'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.<br />不可以說出或做出該人名, 或其同音字, 否則該題分數取消',
-      'answer': '約書亞'
+      'answer': '腓利門'
     },
     'sec1-song-5': {
       'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.<br />不可以說出或做出該人名, 或其同音字, 否則該題分數取消',
-      'answer': '以斯帖'
+      'answer': '百基拉'
     },
 
 
-    // section 1 看圖猜成語
+    // section 1 飲食男女
     'sec1-iq-1' :{
-      'question': '<img src="assets/yesno.png"  style="width: 80%;" />',
-      'answer': '無中生有'
+      'question': '夏季在烈日下工作或運動量過大出汗多時，為預防中暑應多喝：<br />A、糖水 <br />B、糖醋水 <br />C、鹽開水 <br />D、白開水',
+      'answer': 'C、鹽開水'
     },
     'sec1-iq-2' :{
-      'question': '<img src="assets/cow.png"  style="width: 80%;" />',
-      'answer': '對牛彈琴'
+      'question': '茶葉根據發酵程度可分為不發酵茶、部分發酵茶與全發酵茶，那麼不需要發酵製作工藝的茶葉是哪種？<br />A、白茶 <br />B、綠茶<br />C、黃茶 <br />D、紅茶',
+      'answer': 'B、綠茶'
     },
     'sec1-iq-3' :{
-      'question': '<img src="assets/spring.png"  style="width: 80%;" />',
-      'answer': '枯木逢春'
+      'question': '世界三大飲料有哪些？',
+      'answer': '茶、可可、咖啡'
     },
     'sec1-iq-4' :{
-      'question': '<img src="assets/fall.png"  style="width: 80%;" />',
-      'answer': '一葉知秋'
+      'question': ' 豆瓣醬是一種常見的調味品,請問製作它的主要原料是哪種豆?<br />A、黃豆 <br />B、蠶豆 <br />C、豌豆 <br />D、花生',
+      'answer': 'B、蠶豆'
     },
     'sec1-iq-5' :{
-      'question': '<img src="assets/fish.png"  style="width: 80%;" />',
-      'answer': '混水摸魚'
+      'question': '中國八大菜系有哪些？',
+      'answer': '魯、 川、 粵、 閩、 蘇、 浙、湘、 徽'
     },
 
 
     // section 2
     'sec2-1': {
-      'question': '<img src="assets/sick.png"  style="width: 80%;"/>',
-      'answer': '病從口入'
+      'question': '十二生肖中，名字未出現在聖經中的是？ ',
+      'answer': '虎 <br />其他動物之聖經出處如次：鼠(利11:29)、牛(利17:3)、兔(利11:6)、龍(啟12:9)、蛇(啟12:15)、馬(王上10:28)、羊(利17:3)、猴(王上10:22)、雞(太26:34)、狗(太15:26)、豬(利11:7)'
     },
     'sec2-2': {
-      'question': '<img src="assets/raise.png"  style="width: 80%;"/>',
-      'answer': '蒸蒸日上'
+      'question': '兄有樹木無數。〈猜聖經地名〉',
+      'answer': '哥林多'
     },
     'sec2-3': {
-      'question': '詩篇總共有多少篇？<br />A. 150<br />B.155<br />C. 160<br />D.167',
-      'answer': 'A. 150'
+      'question': '禱告的四個重點 ACTS代表什麼？',
+      'answer': 'Adoration、Confession、Thanksgiving、Supplication'
     },
     'sec2-4': {
-      'question': '摩西五經是哪幾卷書?',
-      'answer': '創世記、出埃及記、利未記、民數記、申命記'
+      'question': '殷勤不可_____。要_____，常常_____主。在指望中要_____，在患難中要_____，禱告要_____。',
+      'answer': '懶惰、心裏火熱、服事、喜樂、忍耐、恆切 （ 羅12：11）'
     },
     'sec2-5': {
-      'question': '亞伯拉罕的原名是甚麼？',
-      'answer': '亞伯蘭'
+      'question': '非洲的第一位基督徒是誰？',
+      'answer': '埃提阿伯的太監。（徒八26－40）'
     },
     'sec2-6': {
-      'question': '摩西五經又稱為什麼書？',
-      'answer': '律法書'
+      'question': '酒對人體損害最嚴重的器官是：<br />A 、心、脾<br />B、肝、胃 <br />C、腎、膀恍',
+      'answer': 'B、肝、胃'
     },
     'sec2-7': {
-      'question': '舊約歷史書有多少卷和有哪些？',
-      'answer': '歷史書十二卷 (約書亞記，士師記，路得記，撒母耳記上下卷，列王紀上下卷，歷代志上下卷，以斯拉記，尼希米記，以斯帖記等十二卷，乃按各書之內容性質，分類為舊約歷史書，此為現今聖經通用之次序。)'
+      'question': '天然食品中，營養最完整和易於吸收的是下列哪類物質 ：<br />A、水果<br />B、魚肉 <br />C、穀物 <br />D、乳類',
+      'answer': 'D、乳類'
     },
     'sec2-8': {
-      'question': '請猜詩歌名字<p><audio controls preload=auto><source src="assets/奔跑不放棄.mp3" type="audio/mpeg"></audio></p>',
-      'answer': '奔跑不放棄'
+      'question': '我賜你們一條_____，乃是叫你們_____，我怎樣_____，你們也要怎樣_____。',
+      'answer': '新命令、彼此相愛、愛你們、相愛'
     },
     'sec2-9': {
       'question': '請猜詩歌名字<p><audio controls preload=auto><source src="assets/我的家要榮耀主piano.mp3" type="audio/mpeg"></audio></p>',
-      'answer': '我的家要榮耀主<p><audio controls preload=auto><source src="assets/我的家要榮耀主.mp3" type="audio/mpeg"></audio></p>'
+      'answer': '我的家要榮耀主<p><audio controls preload=auto><source src="assets/我的家要榮耀主.mp3" type="audio/mpeg"></audio></p>'      
     },
     'sec2-10': {
-      'question': '誰是第一個生下來第八天就接受割禮？',
-      'answer': '以撒。（創21：4）'
+      'question': '耶穌開始傳道時講的第一句話是：',
+      'answer': '天國近了, 你們應當悔改 （太4:17)'
     },
     'sec2-11': {
-      'question': '耶和華尼西翻出來是?',
-      'answer': '耶和華是我旌旗 （出17:15）'
+      'question': '在十二門徒中, 第一個為主殉道的是誰? ',
+      'answer': '雅各'      
     },
     'sec2-12': {
-      'question': '耶和華以勒翻出來是?',
-      'answer': '耶和華必預備 （創22:14）'
+      'question': '請猜詩歌名字<p><audio controls preload=auto><source src="assets/你愛永不變.mp3" type="audio/mpeg"></audio></p>',
+      'answer': '你愛永不變<p><audio controls preload=auto><source src="assets/你愛永不變.mp3" type="audio/mpeg"></audio></p>'      
     },
     'sec2-13': {
-      'question': '士師基甸以三百人用什麼武器打敗眾多的米甸敵人？',
-      'answer': '瓶子、火把、號角。（士師記七章）'
+      'question': '彼得曾用什麼動物形容魔鬼?',
+      'answer': '獅子 <br />“務要謹守，儆醒。因為你們的仇敵魔鬼，如同吼叫的獅子，遍地游行，尋找可吞吃的人“（彼前5:8）'
     },
     'sec2-14': {
-      'question': '在以色列人中有幾個支派？請列舉六個.',
-      'answer': '12支派（民數記13：1 ~ 17） －呂便(流便), 西緬, 猶大, 以薩迦, 西布倫, 迦得, 亞設, 但, 拿弗他利, 以法蓮, 瑪拿西, 便雅憫'
+      'question': '彼得教導女人要以什麼作為妝飾?',
+      'answer': '長久溫柔、安靜的心 “你們不要以外面的辮頭髮，戴金飾，穿美衣為妝飾，只要以裏面存著長久溫柔，安靜的心為妝飾；這在神面前是極寶貴的。“ （彼前3:3-4）'
     },
     'sec2-15': {
-      'question': '<img src="assets/rainbow.png"  style="width: 80%;" /> ',
-      'answer': '神以彩虹作為與人立約的記號'
+      'question': '請猜詩歌名字<p><audio controls preload=auto><source src="assets/全然為你.mp3" type="audio/mpeg"></audio></p>',
+      'answer': '全然為你<p><audio controls preload=auto><source src="assets/全然為你.mp3" type="audio/mpeg"></audio></p>'      
     },
 
 
     // Section 3
    'sec3-1': {
-     'question': '請默寫 －詩篇23篇',
-     'answer': '耶和華是我的牧者，我必不致缺乏。<br/>他使我躺臥在青草地上，領我在可安歇的水邊。<br/>他使我的靈魂甦醒，為自己的名引導我走義路。<br/>我雖然行過死蔭的幽谷，也不怕遭害，因為你與我同在；你的杖，你的竿，都安慰我。<br/>在我敵人面前，你為我擺設筵席；你用油膏了我的頭，使我的福杯滿溢。<br/>我一生一世必有恩惠慈愛隨著我；我且要住在耶和華的殿中，直到永遠。<br/>'
+     'question': 'Move 3 coins to turn the triangle upside down<br /><img src="assets/triangle-number.png"  style="width: 80%;"/>',
+     'answer': '1. Move circle number 7 to the left of 2.<br />2. Move circle number 10 to the right of 3. <br />3. Put circle number 1 at the bottom.'
    },
    'sec3-2': {
-      'question': '耶穌在登山寶訓論的八福是那八福？',
-      'answer': '<img src="assets/八福.png" />'
+      'question': '',
+      'answer': ''
    },
 
 };
