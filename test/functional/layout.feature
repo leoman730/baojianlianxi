@@ -65,4 +65,3 @@ Feature: Updating score
         Then I update the score
         And I click the update button
         I should see the updated score for the team
-         
