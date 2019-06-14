@@ -1,40 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:game/drawer.dart';
-
+import 'package:game/score_board.dart';
+import 'section2_question_board.dart';
 
 class Section2Screen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBar(
         title: Text("Section 2"),
       ),
-      body: Stack (
+      body:
+      Column (
         children: <Widget>[
-          Center(
-            child: new Image.asset(
-              'assets/images/splash.png',
-              width: size.width,
-              height: size.height,
-              fit: BoxFit.fill,
-            ),
+          Expanded(
+              flex: 7,
+              child: Section2QuestionBoard()
           ),
-          Center(
-            child: Text(
-              "Some text here",
-              style: TextStyle (
-                fontWeight: FontWeight.bold,
-                fontSize: 28.0,
-                color: Colors.white
-              ),
-            ),
+          Expanded(
+            flex: 3,
+            child: ScoreBoard(),
           )
         ],
       ),
       drawer: DrawerWidget(),
-
     );
   }
 }
+
+
+

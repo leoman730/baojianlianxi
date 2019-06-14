@@ -20,6 +20,11 @@ samples, guidance on mobile development, and a full API reference.
 * See card styles: https://materializecss.com/cards.html
 
 
+## To do
+    * How to access share state info from various screen
+
+
+
 ## Resources:
 * https://github.com/hnvn/flutter_flip_panel
 * https://github.com/Solido/awesome-flutter
