@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_circular_chart/flutter_circular_chart.dart';
+import 'package:game/model/game_model.dart';
 
 class ScoreChart extends StatefulWidget {
+  final Team team;
+
+  ScoreChart(this.team);
+
   @override
   ScoreChartState createState() => ScoreChartState();
 }
@@ -11,7 +16,7 @@ class ScoreChartState extends State<ScoreChart> {
       new GlobalKey<AnimatedCircularChartState>();
 
   final _chartSize = const Size(80.0, 80.0);
-  double value = 50.0;
+  double value = 0.0;
   Color labelColor = Colors.blue[200];
 
   List<CircularStackEntry> _generateChartData(double value) {
@@ -54,18 +59,19 @@ class ScoreChartState extends State<ScoreChart> {
     return data;
   }
 
-  void _increment() {
+  void _increment({double value = 10}) {
+    widget.team.increment(value);
+
     setState(() {
-      value += 10;
-      List<CircularStackEntry> data = _generateChartData(value);
+      List<CircularStackEntry> data = _generateChartData(widget.team.score);
       _chartKey.currentState.updateData(data);
     });
   }
 
-  void _decrement() {
+  void _decrement({double value = 10}) {
+    widget.team.decrement(value);
     setState(() {
-      value -= 10;
-      List<CircularStackEntry> data = _generateChartData(value);
+      List<CircularStackEntry> data = _generateChartData(widget.team.score);
       _chartKey.currentState.updateData(data);
     });
   }
@@ -76,6 +82,8 @@ class ScoreChartState extends State<ScoreChart> {
         .textTheme
         .title
         .merge(new TextStyle(color: labelColor));
+
+    value = widget.team.score;
 
     return new Column(
       children: <Widget>[
