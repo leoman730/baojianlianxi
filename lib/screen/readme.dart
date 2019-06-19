@@ -10,6 +10,7 @@ class ReadmeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("遊戲說明"),
+        automaticallyImplyLeading: true,
       ),
       body: Stack (
         children: <Widget>[

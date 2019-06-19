@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:game/category.dart';
+//import 'package:flip_card/flip_card.dart';
+
 
 class Section1QuestionBoard extends StatelessWidget {
   var _questions = {
@@ -10,6 +12,12 @@ class Section1QuestionBoard extends StatelessWidget {
     '猜猜我是誰': ['10 分', '20 分','30 分','40 分','50 分'],
     '飲食男女': ['10 分', '20 分','30 分','40 分','50 分'],
   };
+
+//  final GlobalKey<FlipCardState> cardKey;
+
+//  Section1QuestionBoard({Key key, this.cardKey}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {

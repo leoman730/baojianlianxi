@@ -30,3 +30,4 @@ samples, guidance on mobile development, and a full API reference.
 * https://github.com/Solido/awesome-flutter
 * https://pub.dev/
 * https://medium.com/flutter-community/flutter-how-to-build-a-quiz-game-596d0f369575
+* [Scope model example](https://github.com/brianegan/scoped_model/blob/multiple-models/example/lib/main.dart)

@@ -39,3 +39,13 @@ class Team extends Model {
     notifyListeners();
   }
 }
+
+class Question extends Model {
+  double score;
+  String type;
+  String question;
+  String answer;
+  String image;
+  String audio;
+  String section;
+}
