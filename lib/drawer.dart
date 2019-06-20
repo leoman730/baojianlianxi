@@ -15,11 +15,11 @@ class DrawerWidget extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               child: UserAccountsDrawerHeader(
-              accountName: Text("Ashish Rawat"),
-              accountEmail: Text("ashishrawat2911@gmail.com"),
+//              accountName: Text("Ashish Rawat"),
+//              accountEmail: Text("ashishrawat2911@gmail.com"),
               currentAccountPicture: CircleAvatar(
-              child: Text( "A",
-                  style: TextStyle(fontSize: 40.0),
+                child: Text( "Ray",
+                  style: TextStyle(fontSize: 20.0),
                 ),
               ),
             ),
@@ -27,8 +27,13 @@ class DrawerWidget extends StatelessWidget {
                 color: Colors.blue,
               ),
             ),
+
+
+            
             ListTile(
               title: Text('遊戲說明'),
+              trailing: Icon(Icons.arrow_forward_ios),
+
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute( builder: (context) => ReadmeScreen()));
@@ -36,6 +41,7 @@ class DrawerWidget extends StatelessWidget {
             ),
             ListTile(
               title: Text('Section 1'),
+              trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute( builder: (context) => Section1Screen()));
@@ -43,6 +49,7 @@ class DrawerWidget extends StatelessWidget {
             ),
             ListTile(
               title: Text('Section 2'),
+              trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute( builder: (context) => Section2Screen()));
@@ -50,6 +57,7 @@ class DrawerWidget extends StatelessWidget {
             ),
             ListTile(
               title: Text('Section 3'),
+              trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute( builder: (context) => Section3Screen()));

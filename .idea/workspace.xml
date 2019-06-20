@@ -2,45 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca57209d-7ce3-446e-ad8b-035691640afa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/app.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/app.dill.track.dill" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/app.dill.track.dill.incremental.dill" beforeDir="false" afterPath="$PROJECT_DIR$/build/app.dill.track.dill.incremental.dill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Assets.car" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/App" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/Runner" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/Debug-iphonesimulator/Runner.app/_CodeSignature/CodeResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Assets.car" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Assets.car" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/App.framework/App" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/App.framework/App" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/App.framework/_CodeSignature/CodeResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Runner" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/Runner" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources" beforeDir="false" afterPath="$PROJECT_DIR$/build/ios/iphonesimulator/Runner.app/_CodeSignature/CodeResources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/snapshot_blob.bin.d" beforeDir="false" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/snapshot_blob.bin.d.fingerprint" beforeDir="false" afterPath="$PROJECT_DIR$/build/snapshot_blob.bin.d.fingerprint" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/category.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/category.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/model/game_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/model/game_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/question_name_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/question_name_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/score_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/score_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screen/question_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screen/question_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screen/section1_question_board.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screen/section1_question_board.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screen/section2_question_board.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screen/section2_question_board.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/drawer.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,11 +30,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screen/question_screen.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+            <state relative-caret-position="177">
+              <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/drawer.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="541">
+              <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -174,6 +149,7 @@
       <find>print</find>
       <find>answer</find>
       <find>front</find>
+      <find>email</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,7 +165,6 @@
         <option value="$PROJECT_DIR$/lib/model/team_model.dart" />
         <option value="$PROJECT_DIR$/lib/score_chart.dart" />
         <option value="$PROJECT_DIR$/lib/score_board.dart" />
-        <option value="$PROJECT_DIR$/lib/drawer.dart" />
         <option value="$PROJECT_DIR$/lib/screen/section1.dart" />
         <option value="$PROJECT_DIR$/lib/screen/readme.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
@@ -202,6 +177,7 @@
         <option value="$PROJECT_DIR$/lib/category.dart" />
         <option value="$PROJECT_DIR$/lib/model/game_model.dart" />
         <option value="$PROJECT_DIR$/lib/screen/question_screen.dart" />
+        <option value="$PROJECT_DIR$/lib/drawer.dart" />
       </list>
     </option>
   </component>
@@ -433,16 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/drawer.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -550,8 +516,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/screen/question_screen.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+        <state relative-caret-position="177">
+          <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/drawer.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
