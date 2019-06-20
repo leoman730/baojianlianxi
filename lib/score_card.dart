@@ -15,7 +15,7 @@ class ScoreCardState extends State <ScoreCard> {
 
   @override
   Widget build(BuildContext context) {
-    print("I am rebuild");
+   // print("I am rebuild");
     return Card(
         child: Row (
           children: <Widget>[

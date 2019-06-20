@@ -36,14 +36,14 @@ class Section2QuestionBoard extends StatelessWidget {
 
   List<Widget> _buildQuestionList() {
     List<Widget> items = [];
-    _questions.forEach((key, value) {
-      items.add(
-          new Expanded(
-              child:
-              CategoryColumnWidget(key, value)
-          )
-      );
-    });
+//    _questions.forEach((key, value) {
+//      items.add(
+//          new Expanded(
+//              child:
+//              CategoryColumnWidget(key, value)
+//          )
+//      );
+//    });
 
     return items;
 

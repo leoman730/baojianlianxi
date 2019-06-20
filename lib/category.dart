@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:game/model/game_model.dart';
 import 'category_name_card.dart';
 import 'question_name_card.dart';
 
@@ -6,9 +7,9 @@ class CategoryColumnWidget extends StatelessWidget {
   String categoryName;
   List questions;
 
-  CategoryColumnWidget(categoryName, questions) {
-    this.categoryName = categoryName;
-    this.questions = questions;
+  CategoryColumnWidget(questionSet) {
+    this.categoryName = questionSet['key'];
+    this.questions = questionSet['questions'];
   }
 
   @override
@@ -22,7 +23,9 @@ class CategoryColumnWidget extends StatelessWidget {
           child: ListView.builder(
               itemCount: questions.length,
               itemBuilder: (context, index) {
-                return QuestionCard(questions[index]);
+//                print(questions[index]);
+                Question question = Question(questions[index]);
+                return QuestionCard(question);
               })),
       ],
     );

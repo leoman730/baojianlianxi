@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'screen/question_screen.dart';
-
+import 'package:game/model/game_model.dart';
 
 class QuestionCard extends StatefulWidget {
-  final String name;
+  final Question question;
 
-  QuestionCard(this.name);
+  QuestionCard(this.question);
 
   @override
   QuestionCardState createState() => QuestionCardState();
@@ -14,39 +14,10 @@ class QuestionCard extends StatefulWidget {
 class QuestionCardState extends State<QuestionCard> {
   bool has_opened = false;
 
-//  Future<void> _showQuestion() async{
-//    return showDialog<void>(
-//      context: context,
-//      barrierDismissible: false, // user must tap button!
-//      builder: (BuildContext context) {
-//        return AlertDialog(
-//          title: Text('Rewind and remember'),
-//          content: SingleChildScrollView(
-//            child: ListBody(
-//              children: <Widget>[
-//                Text('You will never be satisfied.'),
-//                Text('You\’re like me. I’m never satisfied.'),
-//              ],
-//            ),
-//          ),
-//          actions: <Widget>[
-//            FlatButton(
-//              child: Text('Regret'),
-//              onPressed: () {
-//                Navigator.of(context).pop();
-//              },
-//            ),
-//          ],
-//        );
-//      },
-//    );
-//  }
-
-
-  _showQuestion() {
-//    cardKey.currentState.toggleCard();
+  _showQuestion(Question question) {
+    print("Before show question: " + question.toString());
     Navigator.push(context,
-        MaterialPageRoute( builder: (context) => QuestionScreen()));
+        MaterialPageRoute( builder: (context) => QuestionScreen(question)));
   }
 
 
@@ -66,8 +37,7 @@ class QuestionCardState extends State<QuestionCard> {
           splashColor: Colors.blue.withAlpha(90),
 
           onTap: () {
-            print('Card tapped.');
-            _showQuestion();
+            _showQuestion(widget.question);
           },
           child: Stack(
           children: <Widget>[
@@ -83,7 +53,7 @@ class QuestionCardState extends State<QuestionCard> {
                 height: _height,
                 child: Center(
                   child: Text(
-                    widget.name,
+                    widget.question.score.toString(),
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

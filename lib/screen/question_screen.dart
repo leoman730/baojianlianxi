@@ -2,13 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:game/drawer.dart';
 import 'package:game/score_board.dart';
 import 'package:flip_card/flip_card.dart';
+import 'package:game/model/game_model.dart';
+
 
 class QuestionScreen extends StatelessWidget {
+  Question question;
+
+  QuestionScreen(this.question);
+
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
-        title: Text("Question"),
+        title: Text("Question: " + question.id + " score: " + question.score.toString()),
       ),
       body: Column(
         children: <Widget>[
@@ -22,16 +30,16 @@ class QuestionScreen extends StatelessWidget {
                   front: Container(
                     decoration: BoxDecoration(
                       color: Colors.yellow,
-                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+//                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     ),
-                    child: _buildQuestionScreen(),
+                    child: _buildQuestionScreen(question),
                   ),
                   back: Container(
                     decoration: BoxDecoration(
                       color: Color(0xFF006666),
-                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+//                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
                     ),
-                    child: _buildQuestionScreen(withAnswer: true),
+                    child: _buildQuestionScreen(question, withAnswer: true),
                   ),
                 ),
               )),
@@ -45,22 +53,24 @@ class QuestionScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildQuestionScreen({bool withAnswer = false}) {
-    const question = {
-      "image": 'assets/images/splash.png',
-      "main_question": "what is in the image?",
-      "answer": "a sword",
-    };
+  Widget _buildQuestionScreen(Question question , {bool withAnswer = false}) {
+//    const question = {
+//      "image": 'assets/images/splash.png',
+//      "main_question": "what is in the image?",
+//      "answer": "a sword",
+//    };
+print('has image: '+ question.id) ;
+print( question.image);
 
     List<Widget> content = [];
 
-    if (question.containsKey("image")) {
+    if (question.image != null) {
       Widget image = Center(child: Builder(builder: (BuildContext context) {
         Size size = MediaQuery
             .of(context)
             .size;
         return new Image.asset(
-          question['image'],
+          question.image,
           height: size.height * 0.3,
           fit: BoxFit.fill,
         );
@@ -71,18 +81,17 @@ class QuestionScreen extends StatelessWidget {
 
     Widget main_question = Center(
       child: Text(
-        question['main_question'],
+        question.question,
         style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
       ),
     );
 
     content.add(main_question);
 
-
     if (withAnswer == true) {
       Widget answer = Center(
         child: Text(
-          question['answer'],
+          question.answer,
           style: TextStyle(
               fontSize: 28.0,
               fontWeight: FontWeight.bold,
@@ -114,5 +123,7 @@ class QuestionScreen extends StatelessWidget {
 //      print('dragged from right');
       Navigator.pop(context);
   }
+
+
 
 }
