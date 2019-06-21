@@ -89,55 +89,66 @@ class ActivitySettingFormState extends State<ActivitySettingForm> {
     });
 
 
-    return Form(
-        key: _formKey,
-        child: Center(
-            child: Column(
-          children: <Widget>[
-            Text(
-              'Active Team',
-              style: new TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18.0,
+    return Padding(
+      padding: EdgeInsets.all(20.0),
+      child: Form(
+          key: _formKey,
+          child: Center(
+              child: Column(
+            children: <Widget>[
+              Text(
+                'Active Team',
+                style: new TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                ),
               ),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Radio(
-                    value: widget.model.teams[0].id,
-                    groupValue: widget.model.activeTeam,
-                    onChanged: (newValue) {
-                      _toggleActiveTeam();
-                    }),
-                Radio(
-                    value: widget.model.teams[1].id,
-                    groupValue: widget.model.activeTeam,
-                    onChanged: (newValue) {
-                      _toggleActiveTeam();
-                    }),
-              ],
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: widget.model.teams[0].id,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Radio(
+                      value: widget.model.teams[0].id,
+                      groupValue: widget.model.activeTeam,
+                      onChanged: (newValue) {
+                        _toggleActiveTeam();
+                      }),
+                  new Text(
+                    widget.model.teams[0].id,
+                    style: new TextStyle(fontSize: 16.0),
+                  ),
+                  Radio(
+                      value: widget.model.teams[1].id,
+                      groupValue: widget.model.activeTeam,
+                      onChanged: (newValue) {
+                        _toggleActiveTeam();
+                      }),
+                  new Text(
+                    widget.model.teams[1].id,
+                    style: new TextStyle(fontSize: 16.0),
+                  ),
+                ],
               ),
-              controller: team1ScoreTextFieldController,
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: widget.model.teams[1].id,
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: widget.model.teams[0].id,
+                ),
+                controller: team1ScoreTextFieldController,
               ),
-              controller: team2ScoreTextFieldController,
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                labelText: 'Active Score',
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: widget.model.teams[1].id,
+                ),
+                controller: team2ScoreTextFieldController,
               ),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Active Score',
+                ),
 //              initialValue: widget.model.activeScore.toString(),
-              controller: activeScoreTextFieldController,
-            ),
-          ],
-        )));
+                controller: activeScoreTextFieldController,
+              ),
+            ],
+          ))),
+    );
   }
 }

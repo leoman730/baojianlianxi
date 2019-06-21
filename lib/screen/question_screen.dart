@@ -6,28 +6,40 @@ import 'package:game/model/game_model.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'activity_manager.dart';
 
-class QuestionScreen extends StatelessWidget {
-  Question question;
+
+
+class QuestionScreen extends StatefulWidget {
+  final Question question;
 
   QuestionScreen(this.question) {
     // Update active score here
   }
 
   @override
+  QuestionScreenState createState() => QuestionScreenState();
+}
+
+
+
+class QuestionScreenState extends State<QuestionScreen> {
+  GameModel model;
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text("Question: " +
-            question.id +
+            widget.question.id +
             " score: " +
-            question.score.toString()),
+            widget.question.score.toString()),
       ),
       body: ScopedModelDescendant(
           builder: (context, child, GameModel model) {
 
             // update active score here
-            print('at question screen');
-            model.setActiveScore(this.question.score.toDouble());
+            model.setActiveScore(widget.question.score.toDouble());
+
+            this.model = model;
 
         return Column(
           children: <Widget>[
@@ -45,14 +57,14 @@ class QuestionScreen extends StatelessWidget {
                         color: Colors.yellow,
 //                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
                       ),
-                      child: _buildQuestionScreen(question),
+                      child: _buildQuestionScreen(widget.question),
                     ),
                     back: Container(
                       decoration: BoxDecoration(
                         color: Color(0xFF006666),
 //                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
                       ),
-                      child: _buildQuestionScreen(question, withAnswer: true),
+                      child: _buildQuestionScreen(widget.question, withAnswer: true),
                     ),
                   ),
                 )),
@@ -68,10 +80,11 @@ class QuestionScreen extends StatelessWidget {
   }
 
   Widget _buildQuestionScreen(Question question, {bool withAnswer = false}) {
-    List<Widget> content = [];
+    List<Widget> main = [];
 
     if (question.image != null) {
-      Widget image = Center(child: Builder(builder: (BuildContext context) {
+      Widget image = Center(
+          child: Builder(builder: (BuildContext context) {
         Size size = MediaQuery.of(context).size;
         return new Image.asset(
           question.image,
@@ -80,34 +93,52 @@ class QuestionScreen extends StatelessWidget {
         );
       }));
 
-      content.add(image);
+      main.add(image);
     }
 
-    Widget main_question = Center(
+    Widget main_question = Padding(
+      padding: EdgeInsets.all(30.0),
       child: Text(
         question.question,
-        style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
       ),
     );
 
-    content.add(main_question);
+//    main.add(main_question);
 
     if (withAnswer == true) {
-      Widget answer = Center(
-        child: Text(
-          question.answer,
-          style: TextStyle(
-              fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.green),
-        ),
+      Widget content = Column(
+//        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          main_question,
+          Text(
+            question.answer,
+            textAlign: TextAlign.left,
+            style: TextStyle(
+                fontSize: 40.0, fontWeight: FontWeight.bold, color: Colors.green),
+          ),
+        ],
       );
 
-      content.add(answer);
+
+
+//      Widget answer = Center(
+//        child: Text(
+//          question.answer,
+//          style: TextStyle(
+//              fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.green),
+//        ),
+//      );
+
+      main.add(content);
+    } else {
+      main.add(main_question);
     }
 
     return Padding(
       padding: EdgeInsets.all(30.0),
-      child: Column(
-        children: content,
+      child: Row(
+        children: main,
       ),
     );
   }
@@ -116,12 +147,14 @@ class QuestionScreen extends StatelessWidget {
     if (details.primaryVelocity == 0)
       return; // user have just tapped on screen (no dragging)
 
-    if (details.primaryVelocity.compareTo(0) == -1)
-//      print('dragged from left');
+    if (details.primaryVelocity.compareTo(0) == -1) {
       Navigator.pop(context);
-    else
-//      print('dragged from right');
+      this.model.toggleActiveTeam();
+    }
+    else {
       Navigator.pop(context);
+      this.model.toggleActiveTeam();
+    }
   }
 
 
@@ -130,10 +163,6 @@ class QuestionScreen extends StatelessWidget {
       return; // user have just tapped on screen (no dragging)
 
     if (details.primaryVelocity.compareTo(0) == -1) {
-//      print('dragged from left');
-//      Navigator.push(context,
-//          MaterialPageRoute( builder: (context) => ActivityManager()));
-//      Navigator.pop(context);
     }
 
     else {

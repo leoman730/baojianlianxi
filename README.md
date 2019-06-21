@@ -22,7 +22,9 @@ samples, guidance on mobile development, and a full API reference.
 
 ## To do
     * How to access share state info from various screen
-    * How to eaqually distribute screen space
+    * How to equally distribute screen space
+
+
 
 
 ## Resources:
