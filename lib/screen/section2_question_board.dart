@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:game/category.dart';
+import 'package:game/model/game_model.dart';
+import 'package:scoped_model/scoped_model.dart';
+import 'package:game/question_name_card.dart';
 
 class Section2QuestionBoard extends StatelessWidget {
-  var _questions = {
-    '新約聖經題目 1': ['10 分', '20 分','30 分','40 分','50 分'],
-    "新約聖經題目 2": ['10 分', '20 分','30 分','40 分','50 分'],
-    '團契教會題': ['10 分', '20 分','30 分','40 分','50 分'],
-    '常識題': ['10 分', '20 分','30 分','40 分','50 分'],
-    '猜猜我是誰': ['10 分', '20 分','30 分','40 分','50 分'],
-    '飲食男女': ['10 分', '20 分','30 分','40 分','50 分'],
-  };
 
   @override
   Widget build(BuildContext context) {
@@ -27,23 +22,38 @@ class Section2QuestionBoard extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
             )),
-        Row(
-          children: _buildQuestionList(),
+        ScopedModelDescendant <GameModel>(
+          builder: (context, child, model) {
+            return Center(
+              child: Row(
+                children: _buildQuestionList(model),
+              ),
+            );
+          },
         )
       ],
     );
   }
 
-  List<Widget> _buildQuestionList() {
+  List<Widget> _buildQuestionList(GameModel model) {
+//    print(model.questions2);
     List<Widget> items = [];
-//    _questions.forEach((key, value) {
-//      items.add(
-//          new Expanded(
-//              child:
-//              CategoryColumnWidget(key, value)
-//          )
-//      );
-//    });
+
+    model.questions2.forEach((questionSet) {
+      print(model);
+      items.add(
+          new Expanded(
+              child:
+                ListView.builder(
+                    itemCount: questionSet['questions'].length,
+                    itemBuilder: (context, index) {
+                    Question question = Question(questionSet['questions'][index]);
+                    return QuestionCard(question);
+                  }
+                )
+          )
+      );
+    });
 
     return items;
 

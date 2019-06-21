@@ -23,7 +23,6 @@ class CategoryColumnWidget extends StatelessWidget {
           child: ListView.builder(
               itemCount: questions.length,
               itemBuilder: (context, index) {
-//                print(questions[index]);
                 Question question = Question(questions[index]);
                 return QuestionCard(question);
               })),

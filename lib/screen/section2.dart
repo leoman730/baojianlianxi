@@ -25,7 +25,7 @@ class Section2Screen extends StatelessWidget {
           )
         ],
       ),
-      drawer: DrawerWidget(),
+//      drawer: DrawerWidget(),
     );
   }
 }
