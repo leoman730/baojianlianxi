@@ -4,12 +4,20 @@ class GameModel extends Model {
   double _score = 100.00;
   bool _isActive = false;
   String _name = 'team name';
+  String activeTeam;
+  double activeScore = 10.00;
 
-  List <Team> _teams = [new Team('team1'), new Team('team2')];
+
+  List <Team> _teams;
 
   double get score => _score;
   String get name => _name;
   List get teams => _teams;
+
+  GameModel() {
+    _teams = [new Team('team1'), new Team('team2')];
+    toggleActiveTeam();
+  }
 
 
 //  var _questions = {
@@ -52,6 +60,37 @@ class GameModel extends Model {
       {'id':'2-5', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 50 },
     ]
   },
+
+    {
+      'key': '新約聖經題目 3',
+      'questions': [
+        {'id':'2-1', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 10 },
+        {'id':'2-2', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 20 },
+        {'id':'2-3', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 30 },
+        {'id':'2-4', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 40 },
+        {'id':'2-5', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 50 },
+      ]
+    },
+    {
+      'key': '新約聖經題目 4',
+      'questions': [
+        {'id':'2-1', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 10 },
+        {'id':'2-2', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 20 },
+        {'id':'2-3', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 30 },
+        {'id':'2-4', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 40 },
+        {'id':'2-5', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 50 },
+      ]
+    },
+    {
+      'key': '新約聖經題目 5',
+      'questions': [
+        {'id':'2-1', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 10 },
+        {'id':'2-2', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 20 },
+        {'id':'2-3', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 30 },
+        {'id':'2-4', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 40 },
+        {'id':'2-5', 'question': 'this is my question', 'answer': 'this is my answer', 'score': 50 },
+      ]
+    },
   ];
 //    '新約聖經題目 2', '團契教會題', '常識題', '猜猜我是誰', '飲食男女'];
 
@@ -59,10 +98,34 @@ class GameModel extends Model {
   List get gameStatus => _game_status;
   List get questions => _questions;
 
-  void toggleActive() {
-    _isActive = !_isActive;
+  void toggleActiveTeam() {
+    this.activeTeam = (this.activeTeam == this.teams[0].id) ? this.teams[1].id : this.teams[0].id;
     notifyListeners();
   }
+
+  void setActiveScore(double value) {
+    print('set active score to: ' + value.toString());
+    this.activeScore = value;
+  }
+
+  setTeamScore(id, value) {
+    Team team = this.findTeamById(id);
+    team.score = value;
+  }
+
+  Team findTeamById(id) {
+    Team candidate;
+    teams.forEach((team) {
+      if (team.id == id) {
+        candidate = team;
+      }
+    });
+
+    return candidate;
+  }
+
+
+
 }
 
 class Team extends Model {
@@ -81,6 +144,12 @@ class Team extends Model {
     score = score - value;
     // Then notify all the listeners.
     notifyListeners();
+  }
+
+  void setScore(value) {
+    print('team: '+ this.id);
+    print('score set to ' + value.toString() );
+    score = value;
   }
 }
 

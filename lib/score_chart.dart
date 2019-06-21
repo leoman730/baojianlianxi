@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_circular_chart/flutter_circular_chart.dart';
 import 'package:game/model/game_model.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 class ScoreChart extends StatefulWidget {
   final Team team;
@@ -59,7 +60,7 @@ class ScoreChartState extends State<ScoreChart> {
     return data;
   }
 
-  void _increment({double value = 10}) {
+  void _increment(double value) {
     widget.team.increment(value);
 
     setState(() {
@@ -68,7 +69,7 @@ class ScoreChartState extends State<ScoreChart> {
     });
   }
 
-  void _decrement({double value = 10}) {
+  void _decrement(value) {
     widget.team.decrement(value);
     setState(() {
       List<CircularStackEntry> data = _generateChartData(widget.team.score);
@@ -85,40 +86,46 @@ class ScoreChartState extends State<ScoreChart> {
 
     value = widget.team.score;
 
-    return new Column(
-      children: <Widget>[
-        new Container(
-          child: new AnimatedCircularChart(
-            key: _chartKey,
-            size: _chartSize,
-            initialChartData: _generateChartData(value),
-            chartType: CircularChartType.Radial,
-            edgeStyle: SegmentEdgeStyle.round,
-            percentageValues: true,
-            holeLabel: value.toInt().toString(),
-            labelStyle: _labelStyle,
+    return ScopedModelDescendant(builder: (context, child, GameModel model) {
+      return Column(
+        children: <Widget>[
+          new Container(
+            child: new AnimatedCircularChart(
+              key: _chartKey,
+              size: _chartSize,
+              initialChartData: _generateChartData(value),
+              chartType: CircularChartType.Radial,
+              edgeStyle: SegmentEdgeStyle.round,
+              percentageValues: true,
+              holeLabel: value.toInt().toString(),
+              labelStyle: _labelStyle,
+            ),
           ),
-        ),
-        new Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            new RaisedButton(
-              onPressed: _decrement,
-              child: const Icon(Icons.remove),
-              shape: const CircleBorder(),
-              color: Colors.red[200],
-              textColor: Colors.white,
-            ),
-            new RaisedButton(
-              onPressed: _increment,
-              child: const Icon(Icons.add),
-              shape: const CircleBorder(),
-              color: Colors.blue[200],
-              textColor: Colors.white,
-            ),
-          ],
-        ),
-      ],
-    );
+          new Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              new RaisedButton(
+                onPressed: () {
+                  _decrement(model.activeScore);
+                },
+                child: const Icon(Icons.remove),
+                shape: const CircleBorder(),
+                color: Colors.red[200],
+                textColor: Colors.white,
+              ),
+              new RaisedButton(
+                onPressed: () {
+                  _increment(model.activeScore);
+                },
+                child: const Icon(Icons.add),
+                shape: const CircleBorder(),
+                color: Colors.blue[200],
+                textColor: Colors.white,
+              ),
+            ],
+          ),
+        ],
+      );
+    });
   }
 }

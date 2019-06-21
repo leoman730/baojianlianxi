@@ -15,7 +15,6 @@ class QuestionCardState extends State<QuestionCard> {
   bool has_opened = false;
 
   _showQuestion(Question question) {
-    print("Before show question: " + question.toString());
     Navigator.push(context,
         MaterialPageRoute( builder: (context) => QuestionScreen(question)));
   }

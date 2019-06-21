@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'screen/readme.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'model/game_model.dart';
+import 'screen/section1.dart';
+import 'screen/activity_manager.dart';
+
 
 void main() => runApp(MyApp(
   gameModel: GameModel()
@@ -19,7 +22,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScopedModel<GameModel> (
       model: gameModel,
-      child: MaterialApp(
+      child:
+      MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: '寶劍練習',
           theme: ThemeData(
             primarySwatch: Colors.blue,
@@ -27,12 +32,14 @@ class MyApp extends StatelessWidget {
 //          initialRoute: '/',
           home: ReadmeScreen(),
           routes: {
-//            '/': (context) => ReadmeScreen(),
+          '/section1': (context) => Section1Screen(),
           },
+
         )
     );
-
   }
+
+
 }
 
 
