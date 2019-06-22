@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' as prefix0;
+import 'package:flutter/widgets.dart';
 import 'package:game/drawer.dart';
 import 'package:game/score_board.dart';
 import 'package:flip_card/flip_card.dart';
@@ -81,7 +83,8 @@ class QuestionScreenState extends State<QuestionScreen> {
     );
   }
 
-  Widget _buildQuestionScreen(Question question, {bool withAnswer = false}) {
+
+  Widget _buildQuestionScreenWithImage(Question question, bool withAnswer) {
     List<Widget> main = [];
 
     if (question.image != null) {
@@ -106,9 +109,9 @@ class QuestionScreenState extends State<QuestionScreen> {
           child: Text(
             question.question,
             style: TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-                backgroundColor: Colors.white,
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold,
+              backgroundColor: Colors.white,
             ),
             textAlign: TextAlign.end,
           ),
@@ -121,51 +124,87 @@ class QuestionScreenState extends State<QuestionScreen> {
     if (withAnswer == true) {
       Widget answer =
       Container(
-        alignment: Alignment.bottomRight,
-        child: Text(
-          question.answer,
-          style: TextStyle(
-              fontSize: 30.0,
-              fontWeight:
-              FontWeight.bold,
-              color: Colors.green,
-              backgroundColor: Colors.white
-          ),
-        )
+          alignment: Alignment.bottomRight,
+          child: Text(
+            question.answer,
+            style: TextStyle(
+                fontSize: 30.0,
+                fontWeight:
+                FontWeight.bold,
+                color: Colors.green,
+                backgroundColor: Colors.white
+            ),
+          )
       );
-
 
       main.add(answer);
 
     }
 
-//    if (withAnswer == true) {
-//      Widget content = Column(
-//        crossAxisAlignment: CrossAxisAlignment.start,
-//        mainAxisAlignment: MainAxisAlignment.center,
-//        children: <Widget>[
-//          main_question,
-//          Text(
-//            question.answer,
-//            textAlign: TextAlign.left,
-//            style: TextStyle(
-//                fontSize: 40.0,
-//                fontWeight:
-//                FontWeight.bold,
-//                color: Colors.green),
-//          ),
-//        ],
-//      );
-
-
-//      main.add(content);
-//    } else {
-//      main.add(main_question);
-//    }
-
     return Padding(
       padding: EdgeInsets.all(30.0),
       child: Stack(
+//        mainAxisAlignment: MainAxisAlignment.center,
+        children: main,
+      ),
+    );
+
+  }
+
+
+  Widget _buildQuestionScreen(Question question, {bool withAnswer = false}) {
+    List<Widget> main = [];
+
+    if(question.image != null) {
+      return _buildQuestionScreenWithImage(question, withAnswer);
+    }
+
+    Widget main_question = Padding(
+      padding: EdgeInsets.all(20.0),
+      child: Container(
+        child: Align(
+//          alignment: Alignment.topLeft,
+          child: Text(
+            question.question,
+            style: TextStyle(
+                fontSize: 25.0,
+//                fontWeight: FontWeight.bold,
+                fontFamily: 'Wei Bei',
+//                backgroundColor: Colors.white,
+            ),
+//            textAlign: TextAlign.end,
+          ),
+        ),
+      ),
+    );
+
+    main.add(main_question);
+
+    if (withAnswer == true) {
+      Widget answer =
+      Container(
+        alignment: Alignment.bottomCenter,
+        decoration: BoxDecoration(
+          color: Colors.white,
+        ),
+        child: Text(
+          question.answer,
+          style: TextStyle(
+              fontSize: 25.0,
+              fontWeight:
+              FontWeight.bold,
+              color: Colors.green,
+//              backgroundColor: Colors.white
+          ),
+        )
+      );
+
+      main.add(answer);
+
+    }
+    return Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Column(
 //        mainAxisAlignment: MainAxisAlignment.center,
         children: main,
       ),

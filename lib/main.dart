@@ -28,6 +28,14 @@ class MyApp extends StatelessWidget {
           title: '寶劍練習',
           theme: ThemeData(
             primarySwatch: Colors.blue,
+            fontFamily: 'Kai Bold',
+            // If a widget want to use default style, it should use reference.
+            // see: https://flutter.dev/docs/cookbook/design/themes
+            textTheme: TextTheme(
+                title: TextStyle(
+                fontSize: 40
+              )
+            )
           ),
 //          initialRoute: '/',
           home: ReadmeScreen(),
