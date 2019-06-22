@@ -19,7 +19,7 @@ class GameModel extends Model {
   List get questions2 => _questions2;
 
   GameModel() {
-    _teams = [new Team('team1'), new Team('team2')];
+    _teams = [new Team('Team A'), new Team('Team B')];
     toggleActiveTeam();
     _questions = _getQuestions();
     _questions2 = _getQuestions2();
@@ -156,10 +156,9 @@ class GameModel extends Model {
           {
             'id':'1-1',
             'question': '為什麼創世記第11章中記載遠古時代人類要建造巴別塔？\n\nA、因為當時天下認得口音、語言都是一樣 \n\nB、 因為神要人類生養眾多，變慢地面，致力萬物 \n\nC、因為想要傳揚自己的名，免得分散到全地 \n\nD、以上都對',
-            'answer': '答案： C'
-                '',
+            'answer': '答案： C',
             'score': 10,
-            'image': 'assets/images/splash.png'
+//            'image': 'assets/images/splash.png'
           },
           {
             'id':'1-2',
@@ -334,8 +333,46 @@ class GameModel extends Model {
             'answer': '答案:40  原因：事實勝於雄(熊)辯',
             'score': 50
           },
+
         ]
       },
+
+      {
+        'key': '猜猜我是誰',
+        'questions': [
+          {
+            'id':'6-1',
+            'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.\n\n不可以說出或做出該人名, 或其同音字, 否則該題分數取消.',
+            'answer': '答案: 拉班',
+            'score': 10,
+          },
+          {
+            'id':'6-2',
+            'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.\n\n不可以說出或做出該人名, 或其同音字, 否則該題分數取消.',
+            'answer': '答案: 利百加',
+            'score': 20
+          },
+          {
+            'id':'6-3',
+            'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.\n\n不可以說出或做出該人名, 或其同音字, 否則該題分數取消.',
+            'answer': '答案: 拉麥',
+            'score': 30
+          },
+          {
+            'id':'6-4',
+            'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.\n\n不可以說出或做出該人名, 或其同音字, 否則該題分數取消.',
+            'answer': '答案: 利亞',
+            'score': 40
+          },
+          {
+            'id':'6-5',
+            'question': '派出一至兩名代表, 以動作、對話、講出最多三樣關於該人物的事件，猜猜該人物是誰.\n\n不可以說出或做出該人名, 或其同音字, 否則該題分數取消.',
+            'answer': '答案: 瑪土撒拉',
+            'score': 50
+          },
+        ]
+      },
+
     ];
 
     return questions;

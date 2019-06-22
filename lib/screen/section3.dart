@@ -48,7 +48,7 @@ class Section3Screen extends StatelessWidget {
           )
         ],
       ),
-      drawer: DrawerWidget(),
+//      drawer: DrawerWidget(),
 
     );
   }

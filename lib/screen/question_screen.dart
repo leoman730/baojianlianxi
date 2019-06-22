@@ -35,6 +35,7 @@ class QuestionScreenState extends State<QuestionScreen> {
       ),
       body: ScopedModelDescendant(
           builder: (context, child, GameModel model) {
+//            Size size = MediaQuery.of(context).size;
 
             // update active score here
             model.setActiveScore(widget.question.score.toDouble());
@@ -53,6 +54,7 @@ class QuestionScreenState extends State<QuestionScreen> {
                   child: FlipCard(
                     direction: FlipDirection.HORIZONTAL,
                     front: Container(
+//                      width: size.width * 0.8,
                       decoration: BoxDecoration(
                         color: Colors.yellow,
 //                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
@@ -75,7 +77,7 @@ class QuestionScreenState extends State<QuestionScreen> {
           ],
         );
       }),
-      drawer: DrawerWidget(),
+//      drawer: DrawerWidget(),
     );
   }
 
@@ -85,59 +87,86 @@ class QuestionScreenState extends State<QuestionScreen> {
     if (question.image != null) {
       Widget image = Center(
           child: Builder(builder: (BuildContext context) {
-        Size size = MediaQuery.of(context).size;
-        return new Image.asset(
-          question.image,
-          height: size.height * 0.3,
-          fit: BoxFit.fill,
-        );
-      }));
+            Size size = MediaQuery.of(context).size;
+            return new Image.asset(
+              question.image,
+//              height: size.height * 0.35,
+              fit: BoxFit.fill,
+            );
+          }));
 
       main.add(image);
     }
 
     Widget main_question = Padding(
       padding: EdgeInsets.all(30.0),
-      child: Text(
-        question.question,
-        style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+      child: Container(
+        child: Align(
+          alignment: Alignment.topLeft,
+          child: Text(
+            question.question,
+            style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+                backgroundColor: Colors.white,
+            ),
+            textAlign: TextAlign.end,
+          ),
+        ),
       ),
     );
 
-//    main.add(main_question);
+    main.add(main_question);
 
     if (withAnswer == true) {
-      Widget content = Column(
-//        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          main_question,
-          Text(
-            question.answer,
-            textAlign: TextAlign.left,
-            style: TextStyle(
-                fontSize: 40.0, fontWeight: FontWeight.bold, color: Colors.green),
+      Widget answer =
+      Container(
+        alignment: Alignment.bottomRight,
+        child: Text(
+          question.answer,
+          style: TextStyle(
+              fontSize: 30.0,
+              fontWeight:
+              FontWeight.bold,
+              color: Colors.green,
+              backgroundColor: Colors.white
           ),
-        ],
+        )
       );
 
 
+      main.add(answer);
 
-//      Widget answer = Center(
-//        child: Text(
-//          question.answer,
-//          style: TextStyle(
-//              fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.green),
-//        ),
+    }
+
+//    if (withAnswer == true) {
+//      Widget content = Column(
+//        crossAxisAlignment: CrossAxisAlignment.start,
+//        mainAxisAlignment: MainAxisAlignment.center,
+//        children: <Widget>[
+//          main_question,
+//          Text(
+//            question.answer,
+//            textAlign: TextAlign.left,
+//            style: TextStyle(
+//                fontSize: 40.0,
+//                fontWeight:
+//                FontWeight.bold,
+//                color: Colors.green),
+//          ),
+//        ],
 //      );
 
-      main.add(content);
-    } else {
-      main.add(main_question);
-    }
+
+//      main.add(content);
+//    } else {
+//      main.add(main_question);
+//    }
 
     return Padding(
       padding: EdgeInsets.all(30.0),
-      child: Row(
+      child: Stack(
+//        mainAxisAlignment: MainAxisAlignment.center,
         children: main,
       ),
     );
