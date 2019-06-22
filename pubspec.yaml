@@ -27,6 +27,8 @@ dependencies:
   flutter_circular_chart: ^0.1.0
   scoped_model: ^1.0.1
   flip_card: ^0.3.0
+  flutter_html_view: ^0.5.11
+  material_design_icons_flutter: 3.2.3695
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +49,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/images/eden/
+    - assets/images/eden/optimized/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -80,3 +84,9 @@ flutter:
     - family: Wei Bei
       fonts:
         - asset: assets/fonts/wei_bei_medium.ttf
+    - family: Kan Tan Bold
+      fonts:
+        - asset: assets/fonts/kan_tan.ttf
+    - family: Hei Light
+      fonts:
+        - asset: assets/fonts/hei_light.ttf

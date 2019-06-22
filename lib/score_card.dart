@@ -13,9 +13,11 @@ class ScoreCard extends StatefulWidget {
 }
 
 class ScoreCardState extends State <ScoreCard> {
+  ScoreChart scoreChart;
 
   @override
   Widget build(BuildContext context) {
+    scoreChart = ScoreChart(widget.team);
 
     return ScopedModelDescendant(
       builder: (context, child, GameModel model) {
@@ -29,7 +31,7 @@ class ScoreCardState extends State <ScoreCard> {
               Row (
                 children: <Widget>[
                   Expanded (
-                    child: ScoreChart(widget.team),
+                    child: scoreChart,
                     flex: 3,
                   ),
                   Expanded (
@@ -37,8 +39,11 @@ class ScoreCardState extends State <ScoreCard> {
                     child:
                     ListTile(
 //             leading: Icon(Icons.album),
-                      title: Text(widget.team.id),
-                      subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                      title: Text(widget.team.id, style: TextStyle(
+                        fontSize: 50,
+                        color: Colors.grey,
+                      ),),
+//                      subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
                     ),
                   ),
                 ],

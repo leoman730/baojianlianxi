@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 import 'screen/question_screen.dart';
 import 'package:game/model/game_model.dart';
+import 'dart:math';
 
 class QuestionCard extends StatefulWidget {
   final Question question;
@@ -13,6 +14,8 @@ class QuestionCard extends StatefulWidget {
 }
 
 class QuestionCardState extends State<QuestionCard> {
+
+  final _random = new Random();
 
   _showQuestion(Question question) {
     Navigator.push(context,
@@ -26,7 +29,10 @@ class QuestionCardState extends State<QuestionCard> {
     // Todo: This card needs to look better.
     double _height = 65;
     double _width = MediaQuery.of(context).size.width;
-
+    // yeah, 0 is also an integer.
+    int randomNumber = 1 + _random.nextInt(26);
+//    String imageUrl = 'assets/images/kids/'+widget.question.id.toString()+'-min.jpg';
+    String imageUrl = 'assets/images/eden/optimized/'+widget.question.id.toString()+'.jpg';
     double elevation = 5;
 
     return ScopedModelDescendant(
@@ -46,23 +52,29 @@ class QuestionCardState extends State<QuestionCard> {
             },
             child: Stack(
             children: <Widget>[
-//            Container(
-//              width: _width,
-//              height: _height,
-//              child: Image.network(
-//                'https://placeimg.com/640/480/any',
-//                fit: BoxFit.fill,
-//              ),
+              Container(
+                width: _width,
+                height: _height,
+                child: Opacity(
+                    opacity: (model.getCardStatus(widget.question.id)) ? 0.3 : 0.9 ,
+                    child: Image.asset(imageUrl, fit: BoxFit.cover,)
+                ),
+              ),
+//              // todo: how to construct this hero image
+//            Hero(
+//              tag: 'photo',
 //            ),
               Container(
                   height: _height,
-                  child: Center(
+                  padding: EdgeInsets.all(5),
+                  child: Align(
+                    alignment: Alignment.bottomRight,
                     child: Text(
                       widget.question.score.toString(),
                       style: TextStyle(
-                        color: (model.getCardStatus(widget.question.id)) ? Colors.grey : Colors.green ,
+                        color: (model.getCardStatus(widget.question.id)) ? Colors.grey : Colors.white ,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                        fontSize: 15,
                       ),
                     ),
                   )),

@@ -22,7 +22,7 @@ class CategoryNameCard extends StatelessWidget {
         child: Text(this.name,
             style: TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.bold,
+//              fontWeight: FontWeight.bold,
               fontSize: 18,
             )),
       ),

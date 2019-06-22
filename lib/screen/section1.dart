@@ -17,7 +17,7 @@ class Section1Screen extends StatelessWidget {
           _onVerticalDragEnd(details, context),
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Section 1"),
+          title: Text("輪流題"),
         ),
         body:
 
@@ -33,7 +33,7 @@ class Section1Screen extends StatelessWidget {
               )
             ],
           ),
-//        drawer: DrawerWidget(),
+        drawer: DrawerWidget(),
       ),
     );
   }

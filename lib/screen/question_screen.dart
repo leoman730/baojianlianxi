@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter/widgets.dart';
 import 'package:game/drawer.dart';
@@ -30,9 +31,9 @@ class QuestionScreenState extends State<QuestionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Question: " +
+        title: Text("問題: " +
             widget.question.id +
-            " score: " +
+            " 分數: " +
             widget.question.score.toString()),
       ),
       body: ScopedModelDescendant(
@@ -60,12 +61,17 @@ class QuestionScreenState extends State<QuestionScreen> {
                       decoration: BoxDecoration(
                         color: Colors.yellow,
 //                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
+
+//                        image: DecorationImage(
+//                          image: ExactAssetImage('assets/images/1.png')
+//                        )
+
                       ),
                       child: _buildQuestionScreen(widget.question),
                     ),
                     back: Container(
                       decoration: BoxDecoration(
-                        color: Color(0xFF006666),
+                        color: Colors.amber,
 //                      borderRadius: BorderRadius.all(Radius.circular(8.0)),
                       ),
                       child: _buildQuestionScreen(widget.question, withAnswer: true),
@@ -110,7 +116,8 @@ class QuestionScreenState extends State<QuestionScreen> {
             question.question,
             style: TextStyle(
               fontSize: 30.0,
-              fontWeight: FontWeight.bold,
+//              fontWeight: FontWeight.bold,
+//              fontFamily: 'Kan Tan Bold',
               backgroundColor: Colors.white,
             ),
             textAlign: TextAlign.end,
@@ -125,14 +132,18 @@ class QuestionScreenState extends State<QuestionScreen> {
       Widget answer =
       Container(
           alignment: Alignment.bottomRight,
-          child: Text(
-            question.answer,
-            style: TextStyle(
-                fontSize: 30.0,
-                fontWeight:
-                FontWeight.bold,
-                color: Colors.green,
-                backgroundColor: Colors.white
+          child: Container(
+              decoration: BoxDecoration(
+              color: Colors.white,
+            ),
+            child: Text(
+              question.answer,
+              style: TextStyle(
+                  fontSize: 30.0,
+                  fontWeight:
+                  FontWeight.bold,
+                  color: Colors.green,
+              ),
             ),
           )
       );
@@ -163,16 +174,12 @@ class QuestionScreenState extends State<QuestionScreen> {
       padding: EdgeInsets.all(20.0),
       child: Container(
         child: Align(
-//          alignment: Alignment.topLeft,
           child: Text(
             question.question,
             style: TextStyle(
                 fontSize: 25.0,
-//                fontWeight: FontWeight.bold,
-                fontFamily: 'Wei Bei',
-//                backgroundColor: Colors.white,
+                color: Colors.black,
             ),
-//            textAlign: TextAlign.end,
           ),
         ),
       ),

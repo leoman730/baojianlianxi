@@ -1,6 +1,12 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../learn_flutter/flutter/.pub-cache/hosted/pub.dartlang.org/video_player-0.7.2" />
+      <root url="file://$PROJECT_DIR$/../learn_flutter/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_custom_tabs-0.4.0" />
+      <root url="file://$PROJECT_DIR$/../learn_flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1" />
+      <root url="file://$PROJECT_DIR$/../learn_flutter/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-0.4.3" />
+      <root url="file://$PROJECT_DIR$/../learn_flutter/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-3.0.3" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>

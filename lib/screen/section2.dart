@@ -10,7 +10,7 @@ class Section2Screen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Section 2"),
+        title: Text("搶答題"),
       ),
       body:
       Column (
@@ -25,7 +25,7 @@ class Section2Screen extends StatelessWidget {
           )
         ],
       ),
-//      drawer: DrawerWidget(),
+      drawer: DrawerWidget(),
     );
   }
 }

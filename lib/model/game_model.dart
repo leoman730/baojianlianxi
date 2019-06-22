@@ -19,7 +19,7 @@ class GameModel extends Model {
   List get questions2 => _questions2;
 
   GameModel() {
-    _teams = [new Team('Team A'), new Team('Team B')];
+    _teams = [new Team('A 組'), new Team('B 組')];
     toggleActiveTeam();
     _questions = _getQuestions();
     _questions2 = _getQuestions2();
@@ -36,13 +36,13 @@ class GameModel extends Model {
             'id':'2-1-1',
             'question': '哪種水果視力最差? ',
             'answer': '答案：芒果 ',
-            'score': 10,
+            'score': 30,
           },
           {
             'id':'2-1-2',
             'question': '一顆心值多少錢? ',
             'answer': '答案:1億.因為一心一意嘛!',
-            'score': 20
+            'score': 30
           },
           {
             'id':'2-1-3',
@@ -54,13 +54,13 @@ class GameModel extends Model {
             'id':'2-1-4',
             'question': '猶太人的三位先祖是誰？',
             'answer': '答案： 亞伯拉罕、以撒、雅各',
-            'score': 40
+            'score': 30
           },
           {
             'id':'2-1-5',
             'question': '請問雅各在何時得到“以色列”這個名字？',
             'answer': '答案：會見以掃的前一夜，帶家人過雅博渡口以後',
-            'score': 50
+            'score': 30
           },
         ]
       },
@@ -70,17 +70,17 @@ class GameModel extends Model {
         'questions': [
           {
             'id':'2-2-1',
-            'question': '',
-            'answer': ''
+            'question': '耶和華神説：那人________,我要為他__________幫助他。（創世記2:18）',
+            'answer': '答案：獨居不好、造一個配偶'
                 '',
-            'score': 10,
+            'score': 30,
 //            'image': ''
           },
           {
             'id':'2-2-2',
             'question': '舊約中都有誰與神同行？',
             'answer': '答案： 以諾和諾亞',
-            'score': 20
+            'score': 30
           },
           {
             'id':'2-2-3',
@@ -90,16 +90,16 @@ class GameModel extends Model {
           },
           {
             'id':'2-2-4',
-            'question': '',
-            'answer': '',
-            'score': 40
+            'question': ' 因此，____要離開_____，與______，二人_______。（創世記2:24）',
+            'answer': '答案：人、父母、妻子聯合、成為一體',
+            'score': 30
           },
           {
             'id':'2-2-5',
             'question': '看圖猜成語？',
             'answer': '呆若木雞',
             'image': 'assets/images/5.png',
-            'score': 50
+            'score': 30
           },
         ]
       },
@@ -111,36 +111,36 @@ class GameModel extends Model {
             'id':'2-3-1',
             'question': '看圖猜成語？',
             'answer': '金屋藏嬌',
-            'score': 10,
+            'score': 30,
             'image': 'assets/images/6.png'
           },
           {
             'id':'2-3-2',
             'question': '看圖猜成語？',
             'answer': '腸回氣盪',
-            'score': 20
+            'score': 30,
+            'image': 'assets/images/7.png'
           },
           {
             'id':'2-3-3',
-            'question': '神用什麼方式造人？ ',
-            'answer': '答案： 神照著自己的形象和样式造人。創1:26-27',
+            'question': '奧運會上的馬拉松比賽的起源與什麼有關？\n\nA、遊戲\n\nB、打賭\n\nC、戰爭\n\nD、競賽 ',
+            'answer': '答案：C',
             'score': 30
           },
           {
             'id':'2-3-4',
-            'question': '豬圈裡的豬跑出來怎麼辦？（猜一歌手人名）',
-            'answer': '回答：王力宏 原因：往裡哄',
-            'score': 40
+            'question': '"輕於鴻毛"中的鴻毛是那種動物的毛？\\nA、羊\\nB、大雁\\nC、雞\\nD、燕子',
+            'answer': '回答：B',
+            'score': 30
           },
           {
             'id':'2-3-5',
             'question': '怎樣使麻雀安靜下來？  ',
             'answer': '答案：壓它一下。  原因：鴉雀無聲(壓雀無聲)',
-            'score': 50
+            'score': 30
           },
         ]
       },
-
     ];
 
 
@@ -151,7 +151,7 @@ class GameModel extends Model {
   List _getQuestions() {
     List questions = [
       {
-        'key': '新約聖經題目 1',
+        'key': '創世記 1',
         'questions': [
           {
             'id':'1-1',
@@ -188,7 +188,7 @@ class GameModel extends Model {
       },
 
       {
-        'key': '新約聖經題目 2',
+        'key': '創世記 2',
         'questions': [
           {
             'id':'2-1',
@@ -200,14 +200,14 @@ class GameModel extends Model {
           },
           {
             'id':'2-2',
-            'question': '亞伯拉罕的僕人為以撒尋找妻子的經過。以下相關敘述何者正確？\n\nA、亞伯拉罕不希望以撒娶迦南地女子為妻，也不願意在婚後離開迦南地\n\nB、亞伯拉罕的僕人因看到利百加容貌及其俊美，就將金環與金鐲交給她\n\nC、拉班告訴僕人，如果以撒服事他7年，就可以娶利百加的姐姐拉結為妻\n\nD、當利百加在遠處望見以撒，就急忙下了駱駝，跑到以撒面前並與他親嘴',
-            'answer': '答案：A',
+            'question': '雅各如何得到哥哥以掃長子的名份？',
+            'answer': '答案：餅與紅豆湯',
             'score': 20
           },
           {
             'id':'2-3',
-            'question': '雅各如何得到哥哥以掃長子的名份？',
-            'answer': '答案：餅與紅豆湯',
+            'question': '神就照著自己的形象_____，那是照著他的形象______。神就賜福給他們，又對他們説：“________， 遍滿地面，治理這地，也要管理海裏的_____、空中的____、和地上各樣行動的_____.” (創世記1:27-28)',
+            'answer': '答案：造人、造男造女、要生養眾多、魚、鳥、活物',
             'score': 30
           },
           {
@@ -255,8 +255,8 @@ class GameModel extends Model {
           },
           {
             'id':'3-5',
-            'question': '',
-            'answer': '',
+            'question': '五香除花椒、茴香子外還有包括什麼？\n\nA、八角、辣椒、丁香\n\nB、八角、桂皮、丁香花蕾\n\nC、桂皮、八角、胡椒\n\nD、芥末、桂皮、八角',
+            'answer': '答案： B',
             'score': 50
           },
       ]
@@ -317,8 +317,8 @@ class GameModel extends Model {
           },
           {
             'id':'5-3',
-            'question': '以1000加上40，再加1000，再加30，再加1000，现在加上20，再加上1000，现在加上10，总数是什么？（只能在脑中盘算，不要使用纸与笔或计算器）',
-            'answer': '答案：4100',
+            'question': '30-50哪個數字比熊的大便厲害!',
+            'answer': '答案:40  原因：事實勝於雄(熊)辯',
             'score': 30
           },
           {
@@ -329,11 +329,10 @@ class GameModel extends Model {
           },
           {
             'id':'5-5',
-            'question': '30-50哪個數字比熊的大便厲害!',
-            'answer': '答案:40  原因：事實勝於雄(熊)辯',
+            'question': '以1000加上40，再加1000，再加30，再加1000，现在加上20，再加上1000，现在加上10，总数是什么？（只能在脑中盘算，不要使用纸与笔或计算器）',
+            'answer': '答案：4100',
             'score': 50
           },
-
         ]
       },
 

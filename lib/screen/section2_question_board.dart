@@ -14,9 +14,9 @@ class Section2QuestionBoard extends StatelessWidget {
       children: <Widget>[
         Center(
             child: Opacity(
-              opacity: 0.3,
+              opacity: 0.4,
               child: new Image.asset(
-                'assets/images/splash.png',
+                'assets/images/bg1.jpg',
                 width: size.width,
                 height: size.height,
                 fit: BoxFit.fill,

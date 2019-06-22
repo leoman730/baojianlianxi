@@ -82,7 +82,7 @@ class ScoreChartState extends State<ScoreChart> {
     TextStyle _labelStyle = Theme.of(context)
         .textTheme
         .title
-        .merge(new TextStyle(color: labelColor));
+        .merge(new TextStyle(color: labelColor, fontSize: 20, fontFamily: 'Robot'));
 
     value = widget.team.score;
 

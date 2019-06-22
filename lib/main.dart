@@ -4,7 +4,7 @@ import 'package:scoped_model/scoped_model.dart';
 import 'model/game_model.dart';
 import 'screen/section1.dart';
 import 'screen/activity_manager.dart';
-
+import 'screen/intro.dart';
 
 void main() => runApp(MyApp(
   gameModel: GameModel()
@@ -28,17 +28,21 @@ class MyApp extends StatelessWidget {
           title: '寶劍練習',
           theme: ThemeData(
             primarySwatch: Colors.blue,
-            fontFamily: 'Kai Bold',
+            fontFamily: 'Hei Light',
             // If a widget want to use default style, it should use reference.
             // see: https://flutter.dev/docs/cookbook/design/themes
             textTheme: TextTheme(
                 title: TextStyle(
                 fontSize: 40
+              ),
+              body1: TextStyle(
+                fontSize: 20,
+                color: Colors.black,
               )
             )
           ),
 //          initialRoute: '/',
-          home: ReadmeScreen(),
+          home: IntroScreen(),
           routes: {
           '/section1': (context) => Section1Screen(),
           },
