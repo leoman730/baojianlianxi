@@ -31,8 +31,8 @@ class QuestionCardState extends State<QuestionCard> {
     double _width = MediaQuery.of(context).size.width;
     // yeah, 0 is also an integer.
     int randomNumber = 1 + _random.nextInt(26);
-//    String imageUrl = 'assets/images/kids/'+widget.question.id.toString()+'-min.jpg';
-    String imageUrl = 'assets/images/eden/optimized/'+widget.question.id.toString()+'.jpg';
+    String imageUrl = 'assets/images/kids/v2/'+widget.question.id.toString()+'.jpg';
+//    String imageUrl = 'assets/images/eden/optimized/'+widget.question.id.toString()+'.jpg';
     double elevation = 5;
 
     return ScopedModelDescendant(

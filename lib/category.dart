@@ -12,13 +12,26 @@ class CategoryColumnWidget extends StatelessWidget {
     this.questions = questionSet['questions'];
   }
 
+  Widget _buildQuestionCards (List questions) {
+    List <Widget> cards = [];
+    questions.forEach((item) {
+      Question question = new Question(item);
+      cards.add(QuestionCard(question));
+    });
+
+    return Column(children:cards);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         // Print category name.
         CategoryNameCard(this.categoryName),
+//        _buildQuestionCards(questions)
+
         Expanded(
+          flex: 1,
           // Building a list of card for question vertically.
           child: ListView.builder(
               itemCount: questions.length,

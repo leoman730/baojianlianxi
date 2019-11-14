@@ -40,7 +40,7 @@ class Section2QuestionBoard extends StatelessWidget {
     List<Widget> items = [];
 
     model.questions2.forEach((questionSet) {
-      print(model);
+//      print(model);
       items.add(
           new Expanded(
               child:
